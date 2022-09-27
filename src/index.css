@@ -32,7 +32,7 @@
   --status-error: var(--ts-red-500);
 
   /* Font */
-  --ts-font-family: "Roboto", "Arial", sans-serif;
+  --ts-font-family: 'Roboto', 'Arial', sans-serif;
   --ts-font-weight-bold: 700;
   --ts-font-weight-regular: 400;
   --ts-font-style-regular: normal;
@@ -50,18 +50,18 @@
   --line-height-lg: 2rem;
   --line-height-md: normal;
 
-  --ts-headline-1: var(--font-size-3xl) var(--ts-font-family)
-    var(--ts-font-weight-bold) var(--line-height-3xl);
-  --ts-headline-2: var(--font-size-2xl) var(--ts-font-family)
-    var(--ts-font-weight-bold) var(--line-height-2xl);
-  --ts-headline-3: var(--font-size-xl) var(--ts-font-family)
-    var(--ts-font-weight-regular) var(--font-size-xl);
+  --ts-headline-1: normal normal var(--ts-font-weight-bold) normal
+    var(--font-size-3xl) / var(--line-height-3xl) var(--ts-font-family);
+  --ts-headline-2: normal normal var(--ts-font-weight-bold) normal
+    var(--font-size-2xl) / var(--line-height-2xl) var(--ts-font-family);
+  --ts-headline-3: normal normal var(--ts-font-weight-regular) normal
+    var(--font-size-xl) / var(--font-size-xl) var(--ts-font-family);
 
-  --ts-subheading: var(--font-size-lg) var(--ts-font-family)
-    var(--ts-font-weight-regular) var(--line-height-lg);
+  --ts-subheading: normal normal var(--ts-font-weight-regular) normal
+    var(--font-size-lg) / var(--line-height-lg) var(--ts-font-family);
 
-  --ts-copy: var(--font-size-md) var(--ts-font-family)
-    var(--ts-font-weight-regular) var(--line-height-md);
+  --ts-copy: normal normal var(--ts-font-weight-regular) normal
+    var(--font-size-md) / var(--line-height-md) var(--ts-font-family);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -102,4 +102,23 @@ a {
   font-weight: 500;
   color: var(--link-color);
   text-decoration: inherit;
+}
+
+h1 {
+  display: inline;
+  padding: 0 12px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(180deg, #ffdc0f, #ffdc0f),
+    url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNCIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgNCA4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDApIj4KPGxpbmUgeDE9IjQiIHkxPSI0IiB4Mj0iMTUyIiB5Mj0iNCIgc3Ryb2tlPSIjRkZEQzBGIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwIj4KPHJlY3Qgd2lkdGg9IjQiIGhlaWdodD0iOCIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K),
+    url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNCIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgNCA4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDApIj4KPGxpbmUgeDE9IjQiIHkxPSItNCIgeDI9IjE1MiIgeTI9Ii00IiB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSA0IDgpIiBzdHJva2U9IiNGRkRDMEYiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDAiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI4IiBmaWxsPSJ3aGl0ZSIgdHJhbnNmb3JtPSJtYXRyaXgoLTEgMCAwIDEgNCAwKSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=);
+  background-position-x: 12px, 0, 100%;
+  background-position-y: calc(100% - -1px * -1);
+  background-size: calc(100% - 24px) 24px, auto 24px, auto 24px;
+  font: var(--ts-headline-1);
+}
+
+.wave {
+  fill: var(--ts-pineapple-500);
 }
