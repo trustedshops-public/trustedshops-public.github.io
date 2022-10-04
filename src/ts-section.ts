@@ -3,6 +3,7 @@ import { customElement, property, state } from 'lit/decorators.js';
 import { Repository } from './ts-main';
 
 import './ts-card.ts';
+import { rootStyles } from './rootStyles';
 
 @customElement('ts-section')
 export class TsSection extends LitElement {
@@ -18,6 +19,18 @@ export class TsSection extends LitElement {
     this.repositories = JSON.parse(this.list);
     this.title = JSON.parse(this.title);
   }
+
+  static styles = [
+    rootStyles,
+    css`
+      h2 {
+        font: var(--ts-headline-2);
+      }
+      section {
+        padding: var(--font-size-lg) calc((100vw - 1000px) / 2);
+      }
+    `,
+  ];
 
   render() {
     return html`<section>
