@@ -1,4 +1,4 @@
-import { html, LitElement } from 'lit';
+import { css, html, LitElement } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 
 type WaveDirection = 'top' | 'bottom';
@@ -21,7 +21,7 @@ export class TsWave extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    window.addEventListener('resize', (event) => {
+    window.addEventListener('resize', () => {
       const { matches: isMobile } = window.matchMedia('(max-width: 600px');
       const { matches: isTablet } = window.matchMedia('(max-width: 1200px');
 
@@ -34,6 +34,12 @@ export class TsWave extends LitElement {
       }
     });
   }
+
+  static styles = css`
+    svg {
+      display: block;
+    }
+  `;
 
   render() {
     if (this.direction === 'bottom') {
