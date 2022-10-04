@@ -23,13 +23,12 @@ export class TsCard extends LitElement {
   }
 
   render() {
-    console.log(this.repo);
-    return html`<div>
+    return html`<li>
       <h4>${this.repo.name}</h4>
       <p>${this.repo.description}</p>
       <ul>
         ${this.repo.topics.map((topic) => html`<li>${topic}</li>`)}
       </ul>
-    </div>`;
+    </li>`;
   }
 }

@@ -1,4 +1,4 @@
-import { html, LitElement } from 'lit';
+import { css, html, LitElement } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { Repository } from './ts-main';
 
@@ -34,12 +34,12 @@ export class TsSection extends LitElement {
 
   render() {
     return html`<section>
-      <h3>${this.title}</h3>
+      <h2>${this.title}</h2>
       <ul>
         ${this.repositories.map((repository) => {
-          return html` <li>
-            <ts-card repository=${JSON.stringify(repository)}></ts-card>
-          </li>`;
+          return html` <ts-card
+            repository=${JSON.stringify(repository)}
+          ></ts-card>`;
         })}
       </ul>
     </section>`;
