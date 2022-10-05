@@ -47,12 +47,7 @@ export class TsMain extends LitElement {
 
   async connectedCallback(): Promise<void> {
     super.connectedCallback();
-    const response = await fetch(githubApi, {
-      headers: {
-        authorization:
-          'Basic ' + btoa('Braweria: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'),
-      },
-    });
+    const response = await fetch(githubApi);
     const rawList: Repository[] = await response.json();
 
     this.data = getOrderedRepositories(rawList);
