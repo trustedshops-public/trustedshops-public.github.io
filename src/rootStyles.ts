@@ -18,6 +18,7 @@ export const rootStyles = css`
     --ts-gray-50: #efefef;
     --ts-gray-100: #e5e5e5;
     --ts-gray-500: #808080;
+    --ts-gray-700: #4d4d4d;
     --ts-gray-900: #1a1a1a;
 
     /* Signal Colors */
@@ -68,14 +69,14 @@ export const rootStyles = css`
   }
 
   @media (prefers-color-scheme: dark) {
-    :root {
-      --font-color: var(--ts-white);
+    :host {
+      --font-color: var(--ts-gray-100);
       --background-color: var(--ts-gray-900);
     }
   }
 
   @media (max-width: 576px) {
-    :root {
+    :host {
       --font-size-3xl: 2.75rem;
       --font-size-2xl: 1.5rem;
       --font-size-xl: 1.125rem;

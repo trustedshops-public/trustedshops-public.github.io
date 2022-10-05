@@ -15,6 +15,7 @@
   --ts-gray-50: #efefef;
   --ts-gray-100: #e5e5e5;
   --ts-gray-500: #808080;
+  --ts-gray-700: #4d4d4d;
   --ts-gray-900: #1a1a1a;
 
   /* Signal Colors */
@@ -66,7 +67,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --font-color: var(--ts-white);
+    --font-color: var(--ts-gray-100);
     --background-color: var(--ts-gray-900);
   }
 }
@@ -91,12 +92,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font: var(--ts-copy);
+  font-family: var(--ts-font-family);
 }
 
 html,
 body {
   height: 100%;
+  background-color: var(--background-color);
 }
 
 a {
@@ -106,16 +108,6 @@ a {
 }
 
 h1 {
-  /* display: inline;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(180deg, #ffdc0f, #ffdc0f),
-  url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNCIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgNCA4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDApIj4KPGxpbmUgeDE9IjQiIHkxPSI0IiB4Mj0iMTUyIiB5Mj0iNCIgc3Ryb2tlPSIjRkZEQzBGIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwIj4KPHJlY3Qgd2lkdGg9IjQiIGhlaWdodD0iOCIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K),
-  url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNCIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgNCA4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDApIj4KPGxpbmUgeDE9IjQiIHkxPSItNCIgeDI9IjE1MiIgeTI9Ii00IiB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSA0IDgpIiBzdHJva2U9IiNGRkRDMEYiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDAiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI4IiBmaWxsPSJ3aGl0ZSIgdHJhbnNmb3JtPSJtYXRyaXgoLTEgMCAwIDEgNCAwKSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=);
-  background-position-x: 12px, 0, 100%;
-  background-position-y: calc(100% - -1px * -1);
-  background-size: calc(100% - 24px) 24px, auto 24px, auto 24px; */
   padding: 0 12px;
   margin: var(--font-size-2xl) 0;
   font: var(--ts-headline-1);
