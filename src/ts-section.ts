@@ -25,9 +25,20 @@ export class TsSection extends LitElement {
     css`
       h2 {
         font: var(--ts-headline-2);
+        margin-bottom: 1rem;
       }
       section {
-        padding: var(--font-size-lg) calc((100vw - 1000px) / 2);
+        max-width: 1200px;
+        margin: auto;
+        padding-top: var(--font-size-lg);
+        padding-bottom: var(--font-size-lg);
+        color: var(--font-color);
+      }
+      ul {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: 1fr;
+        gap: 1.5rem;
       }
     `,
   ];
