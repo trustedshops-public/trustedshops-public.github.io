@@ -119,6 +119,10 @@ footer > div {
   background-color: var(--ts-pineapple-500);
 }
 
+header > div {
+  padding-bottom: 100px;
+}
+
 nav {
   margin-bottom: var(--font-size-xl);
   display: flex;

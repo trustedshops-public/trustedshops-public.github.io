@@ -27,12 +27,12 @@ export class TsSection extends LitElement {
       h2 {
         font: var(--ts-headline-2);
         margin-bottom: 1rem;
+        margin-left: 1rem;
       }
       section {
         max-width: 1200px;
         margin: auto;
-        padding-top: var(--font-size-lg);
-        padding-bottom: var(--font-size-lg);
+        padding: var(--font-size-lg);
         color: var(--font-color);
       }
       ul {
