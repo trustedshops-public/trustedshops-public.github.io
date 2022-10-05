@@ -4,6 +4,7 @@ import { Repository } from './ts-main';
 
 import './ts-card.ts';
 import { rootStyles } from './rootStyles';
+import { capitaliseFirstLetterOfWord } from './ts-card';
 
 @customElement('ts-section')
 export class TsSection extends LitElement {
@@ -17,7 +18,7 @@ export class TsSection extends LitElement {
   connectedCallback(): void {
     super.connectedCallback();
     this.repositories = JSON.parse(this.list);
-    this.title = JSON.parse(this.title);
+    this.title = capitaliseFirstLetterOfWord(JSON.parse(this.title));
   }
 
   static styles = [
