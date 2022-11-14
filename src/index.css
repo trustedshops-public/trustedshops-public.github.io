@@ -141,3 +141,54 @@ menu > li {
   list-style: none;
   font-size: var(--font-size-md);
 }
+
+.button {
+  background-color: var(--ts-blue-700);
+  color: var(--font-color);
+  padding: 0.5rem 2.5rem;
+  border-radius: 50px;
+
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.button svg {
+  transform: translateX(0rem);
+  transition: transform 0.3s ease-in-out;
+}
+
+.button:hover svg {
+  transform: translateX(0.5rem);
+  transition: transform 0.3s ease-in-out;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+}
+
+footer li:first-child {
+  padding-right: 1rem;
+}
+
+footer li:not(:first-child):not(:last-child) {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-left: 1px solid var(--ts-black);
+  border-right: 1px solid var(--ts-black);
+}
+
+footer li:last-child {
+  padding-left: 1rem;
+}
+
+footer a {
+  --link-color: var(--ts-black);
+}
+
+footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
