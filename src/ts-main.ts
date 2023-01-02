@@ -1,5 +1,7 @@
 import { LitElement, css, html } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
+import { unsafeHTML } from 'lit/directives/unsafe-html.js';
+import { marked } from 'marked';
 
 import './ts-section.ts';
 
@@ -45,12 +47,20 @@ export class TsMain extends LitElement {
   @state()
   private data: GroupRepository = new Map();
 
+  @state()
+  intro: string = '';
+
   async connectedCallback(): Promise<void> {
     super.connectedCallback();
     const response = await fetch(githubApi);
     const rawList: Repository[] = await response.json();
 
     this.data = getOrderedRepositories(rawList);
+
+    const textResponse = await fetch('/intro.md');
+    const text = await textResponse.text();
+
+    this.intro = marked.parse(text);
   }
 
   static styles = css`
@@ -120,15 +130,7 @@ export class TsMain extends LitElement {
           </svg>
         </div>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        ${unsafeHTML(this.intro)}
       </div>
       ${Array.from(this.data).map(([title, repositories]) => {
         return html`<ts-section
