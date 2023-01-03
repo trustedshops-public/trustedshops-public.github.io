@@ -1,0 +1,44 @@
+version: '2.1'
+
+orbs:
+  node: circleci/node@5.0.3
+
+jobs:
+  build:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+      - run:
+          name: Build with vite
+          command: npm run build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - build/
+  deploy:
+    executor: node/default
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: Deploy to GitHub pages
+          command: |
+            git config --global user.email "no-reply@trustedshops.com"
+            git config --global user.name "CircleCI Pipeline"
+            echo "opensource.trustedshops.com" > dist/CNAME
+            npx gh-pages@2.0.1 --dist dist/ --message "docs: Update github pages [ci skip]"
+
+workflows:
+  main:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - main
