@@ -77,7 +77,7 @@ export class TsMain extends LitElement {
       background-color: var(--background-color);
       border-radius: 40px 40px 0 0;
       margin-top: -100px;
-      padding: 40px;
+      padding: 80px 150px 40px;
       padding-top: 80px;
       position: relative;
       box-shadow: -30px -20px 30px -30px rgb(0 0 0 / 50%),
