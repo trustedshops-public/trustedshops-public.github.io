@@ -1,33 +1,33 @@
-## Datenschutzerklärung
+## Privacy policy
 
 **Hosting**  
-Unser Hoster erhebt in sog. Logfiles folgende Daten, die Ihr Browser übermittelt:
+Our hoster collects the following data transmitted by your browser in so-called log files:
 
-IP-Adresse, die Adresse der vorher besuchten Website (Referer Anfrage-Header), Datum und Uhrzeit der Anfrage, Zeitzonendifferenz zur Greenwich Mean Time, Inhalt der Anforderung, HTTP-Statuscode, übertragene Datenmenge, Website, von der die Anforderung kommt und Informationen zu Browser und Betriebssystem.
+IP address, the address of the previously visited website (referer request header), date and time of the request, time zone difference to Greenwich Mean Time, content of the request, HTTP status code, amount of data transferred, website from which the request came and information about the browser and operating system.
 
-Das ist erforderlich, um unsere Website anzuzeigen und die Stabilität und Sicherheit zu gewährleisten. Dies entspricht unserem berechtigten Interesse im Sinne des Art. 6 Abs. 1 S. 1 lit. f DSGVO.
+This is necessary to display our website and to ensure stability and security. This corresponds to our legitimate interest within the meaning of Art. 6 para. 1 p. 1 lit. f DSGVO.
 
-Es erfolgt kein Tracking und wir haben auf diese Daten keinen direkten Zugriff, sondern erhalten lediglich eine anonymisierte, statistische Zusammenfassung. Diese beinhaltet die Adresse der vorher besuchten Seite, die Häufigkeit der jeweils aufgerufenen Seiten und die Anzahl eindeutiger Besucher. Diese Daten führen wir nicht mit anderen Daten zusammen.
+There is no tracking and we do not have direct access to this data, but only receive an anonymized statistical summary. This includes the address of the previously visited page, the frequency of each page viewed and the number of unique visitors. We do not combine this data with other data.
 
-Wir setzen für die Zurverfügungstellung unserer Website folgenden Hoster ein:
+We use the following hoster to make our website available:
 
 GitHub Inc.  
 88 Colin P Kelly Jr St  
 San Francisco, CA 94107  
 United States
 
-Dieser ist Empfänger Ihrer personenbezogenen Daten. Dies entspricht unserem berechtigten Interesse im Sinne des Art. 6 Abs. 1 S. 1 lit. f DSGVO, selbst keinen Server in unseren Räumlichkeiten vorhalten zu müssen. Serverstandort ist USA.
+This is the recipient of your personal data. This corresponds to our legitimate interest within the meaning of Art. 6 (1) p. 1 lit. f DSGVO, not having to maintain a server on our premises ourselves. Server location is USA.
 
-Weitere Informationen zu Widerspruchs- und Beseitigungsmöglichkeiten gegenüber GitHub finden Sie unter: [https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages](https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages)
+For more information on objection and removal options vis-à-vis GitHub, please visit: [https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages](https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages).
 
-Sie haben das Recht der Verarbeitung zu widersprechen. Ob der Widerspruch erfolgreich ist, ist im Rahmen einer Interessenabwägung zu ermitteln.
+You have the right to object to the processing. Whether the objection is successful is to be determined in the context of a balancing of interests.
 
-Die Daten werden gelöscht, sobald der Zweck der Verarbeitung entfällt.
+The data will be deleted as soon as the purpose of the processing ceases to apply.
 
-Die Verarbeitung der unter diesem Abschnitt angegebenen Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Die Funktionsfähigkeit der Website ist ohne die Verarbeitung nicht gewährleistet.
+The processing of the data provided under this section is not required by law or contract. The functionality of the website is not guaranteed without the processing.
 
-GitHub hat Compliance-Maßnahmen für internationale Datenübermittlungen umgesetzt. Diese gelten für alle weltweiten Aktivitäten, bei denen GitHub personenbezogene Daten von natürlichen Personen in der EU verarbeitet. Diese Maßnahmen basieren auf den EU-Standardvertragsklauseln (SCCs). Weitere Informationen finden Sie unter: [https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1--the-standard-contractual-clauses-processors](https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1--the-standard-contractual-clauses-processors)
+GitHub has implemented compliance measures for international data transfers. These apply to all global activities where GitHub processes personal data of individuals in the EU. These measures are based on the EU Standard Contractual Clauses (SCCs). For more information, please visit: [https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1--the-standard-contractual-clauses-processors](https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1--the-standard-contractual-clauses-processors)
 
-## Rechtliche Hinweise
+## Legal notice
 
-Grundsätzlich ist ein Auftragsverarbeitungsvertrag mit dem Hoster abzuschließen. Das bayerische Landesamt für Datenschutzaufsicht hat für das Hosting rein statischer Websites eine Ausnahme gemacht. Für den Fall, dass die Webseite der Selbstdarstellung dient, z.B. von Vereinen oder Kleinunternehmen, keine personenbezogenen Daten an den Betreiber fließen und kein Tracking stattfindet, liegt keine Auftragsverarbeitung vor. Weiter heißt es: „Die Tatsache, dass auch beim Hosting von statischen Webseiten zwangsläufig IP-Adressen, d.h. personenbezogene Daten, verarbeitet werden müssen, führt nicht zur Annahme einer Auftragsverarbeitung. Das wäre nicht sachgerecht. Die (kurzfristige) IP-Adressenspeicherung ist vielmehr noch der TK-Zugangsvermittlung des Website-Hosters nach dem TKG zuzurechnen und dient in erster Linie Sicherheitszwecken des Hosters.“ ([https://www.lda.bayern.de/media/veroeffentlichungen/FAQ_Hosting_keine_Auftragsverarbeitung.pdf](https://www.lda.bayern.de/media/veroeffentlichungen/FAQ_Hosting_keine_Auftragsverarbeitung.pdf)) Wir gehen davon aus, dass diese Ausnahme auf GitHub Pages anzuwenden ist.
+In principle, a contract processing agreement must be concluded with the hoster. The Bavarian State Office for Data Protection Supervision has made an exception for the hosting of purely static websites. In the event that the website is used for self-expression, e.g. by associations or small businesses, no personal data flows to the operator and no tracking takes place, there is no commissioned processing. It goes on to say that "the fact that IP addresses, i.e. personal data, must inevitably be processed even when hosting static websites does not lead to the assumption of commissioned processing. That would not be appropriate. Rather, the (short-term) IP address storage is still attributable to the telecommunications access provision of the website hoster pursuant to the TKG and primarily serves security purposes of the hoster." ([https://www.lda.bayern.de/media/veroeffentlichungen/FAQ_Hosting_keine_Auftragsverarbeitung.pdf](https://www.lda.bayern.de/media/veroeffentlichungen/FAQ_Hosting_keine_Auftragsverarbeitung.pdf) in German) We assume that this exception applies to GitHub Pages.
