@@ -41,19 +41,21 @@ export class TsSection extends LitElement {
         grid-auto-rows: 1fr;
         gap: 1.5rem;
       }
-    `,
+    `
   ];
 
   render() {
-    return html`<section>
-      <h2>${this.title}</h2>
-      <ul>
-        ${this.repositories.map((repository) => {
-          return html` <ts-card
-            repository=${JSON.stringify(repository)}
-          ></ts-card>`;
-        })}
-      </ul>
-    </section>`;
+    return html`
+      <section>
+        <h2>${this.title}</h2>
+        <ul>
+          ${this.repositories.map((repository) => {
+            return html`
+              <ts-card
+                repository='${JSON.stringify(repository)}'
+              ></ts-card>`;
+          })}
+        </ul>
+      </section>`;
   }
 }

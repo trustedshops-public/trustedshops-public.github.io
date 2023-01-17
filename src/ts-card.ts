@@ -2,7 +2,7 @@ import { LitElement, css, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { rootStyles } from './rootStyles';
 import { Repository } from './ts-main';
-import { capitaliseFirstLetterOfWord } from "./util";
+import { capitaliseFirstLetterOfWord } from './util';
 
 @customElement('ts-card')
 export class TsCard extends LitElement {
@@ -16,7 +16,7 @@ export class TsCard extends LitElement {
     description: '',
     created_at: '',
     updated_at: '',
-    topics: [],
+    topics: []
   };
 
   connectedCallback(): void {
@@ -80,15 +80,16 @@ export class TsCard extends LitElement {
           border-color: var(--ts-white);
         }
       }
-    `,
+    `
   ];
 
   render() {
-    return html`<li class="card">
-      <a class="card-link" href="${this.repo.html_url}">
-        <h3>${this.repo.name}</h3>
-        <p>${this.repo.description}</p>
-      </a>
-    </li>`;
+    return html`
+      <li class='card'>
+        <a class='card-link' href='${this.repo.html_url}'>
+          <h3>${this.repo.name}</h3>
+          <p>${this.repo.description}</p>
+        </a>
+      </li>`;
   }
 }

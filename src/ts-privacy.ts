@@ -11,10 +11,13 @@ export class TsPrivacy extends LitElement {
 
   async connectedCallback(): Promise<void> {
     super.connectedCallback();
-    const response = await fetch('/privacy.md');
-    const text = await response.text();
-
-    this.content = marked.parse(text);
+    try {
+      const response = await fetch('/privacy.md');
+      const text = await response.text();
+      this.content = marked.parse(text);
+    } catch (e) {
+      this.content = 'Failed to load privacy statement.';
+    }
   }
 
   static styles = [
@@ -51,13 +54,14 @@ export class TsPrivacy extends LitElement {
         box-shadow: -30px -20px 30px -30px rgb(0 0 0 / 50%),
           30px -20px 30px -30px rgb(0 0 0 / 50%);
       }
-    `,
+    `
   ];
 
   render() {
-    return html`<main>
-      <div class="intro">${unsafeHTML(this.content)}</div>
-    </main> `;
+    return html`
+      <main>
+        <div class='intro'>${unsafeHTML(this.content)}</div>
+      </main> `;
   }
 }
 
