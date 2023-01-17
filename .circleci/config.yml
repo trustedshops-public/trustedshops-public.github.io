@@ -32,6 +32,7 @@ jobs:
             git config --global user.email "no-reply@trustedshops.com"
             git config --global user.name "CircleCI Pipeline"
             echo "opensource.trustedshops.com" > build/CNAME
+            echo "" > build/.nojekyll
             npx gh-pages@2.0.1 --dist build/ --message "docs: Update github pages [ci skip]"
 
 workflows:
