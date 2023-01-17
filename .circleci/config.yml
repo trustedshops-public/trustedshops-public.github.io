@@ -32,7 +32,6 @@ jobs:
             git config --global user.email "no-reply@trustedshops.com"
             git config --global user.name "CircleCI Pipeline"
             echo "opensource.trustedshops.com" > build/CNAME
-            echo "exclude: ['*.md']" > build/_config.yml
             npx gh-pages@2.0.1 --dist build/ --message "docs: Update github pages [ci skip]"
 
 workflows:
