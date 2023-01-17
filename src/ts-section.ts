@@ -4,7 +4,7 @@ import { Repository } from './ts-main';
 
 import './ts-card.ts';
 import { rootStyles } from './rootStyles';
-import { capitaliseFirstLetterOfWord } from './ts-card';
+import { capitaliseFirstLetterOfWord } from './util';
 
 @customElement('ts-section')
 export class TsSection extends LitElement {

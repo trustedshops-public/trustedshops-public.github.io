@@ -2,13 +2,7 @@ import { LitElement, css, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { rootStyles } from './rootStyles';
 import { Repository } from './ts-main';
-
-export function capitaliseFirstLetterOfWord(sentence: string) {
-  return sentence
-    .split('-')
-    .map((word) => `${word.charAt(0).toUpperCase()}${word.slice(1)}`)
-    .join(' ');
-}
+import { capitaliseFirstLetterOfWord } from "./util";
 
 @customElement('ts-card')
 export class TsCard extends LitElement {
