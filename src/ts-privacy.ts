@@ -12,7 +12,7 @@ export class TsPrivacy extends LitElement {
   async connectedCallback(): Promise<void> {
     super.connectedCallback();
     try {
-      const response = await fetch('/privacy.md');
+      const response = await fetch('/privacy-text.md');
       const text = await response.text();
       this.content = marked.parse(text);
     } catch (e) {
