@@ -1,10 +1,10 @@
-import{r as v,i as g,e as u,t as d,s as b,y as p,a as f,m as w,o as _}from"./ts-wave.dd887aa5.js";function y(e){return e.split("-").map(r=>`${r.charAt(0).toUpperCase()}${r.slice(1)}`).join(" ")}var O=Object.defineProperty,$=Object.getOwnPropertyDescriptor,m=(e,r,s,o)=>{for(var t=o>1?void 0:o?$(r,s):r,a=e.length-1,i;a>=0;a--)(i=e[a])&&(t=(o?i(r,s,t):i(t))||t);return o&&t&&O(r,s,t),t};let c=class extends b{constructor(){super(...arguments),this.repository="",this.repo={id:-1,name:"",html_url:"",description:"",created_at:"",updated_at:"",topics:[]}}connectedCallback(){super.connectedCallback(),this.repo=JSON.parse(this.repository),this.repo.name=y(this.repo.name)}render(){return p`
+import{r as v,i as g,e as u,t as d,s as b,y as p,a as f,m as w,o as _}from"./ts-wave.0a024a60.js";function y(e){return e.split("-").map(r=>`${r.charAt(0).toUpperCase()}${r.slice(1)}`).join(" ")}var O=Object.defineProperty,$=Object.getOwnPropertyDescriptor,m=(e,r,s,o)=>{for(var t=o>1?void 0:o?$(r,s):r,a=e.length-1,i;a>=0;a--)(i=e[a])&&(t=(o?i(r,s,t):i(t))||t);return o&&t&&O(r,s,t),t};let l=class extends b{constructor(){super(...arguments),this.repository="",this.repo={id:-1,name:"",html_url:"",description:"",created_at:"",updated_at:"",topics:[]}}connectedCallback(){super.connectedCallback(),this.repo=JSON.parse(this.repository),this.repo.name=y(this.repo.name)}render(){return p`
       <li class='card'>
         <a class='card-link' href='${this.repo.html_url}'>
           <h3>${this.repo.name}</h3>
           <p>${this.repo.description}</p>
         </a>
-      </li>`}};c.styles=[v,g`
+      </li>`}};l.styles=[v,g`
       .card {
         box-shadow: 0 2px 6px 0 rgb(0 0 0 / 14%), 0 1px 2px 0 rgb(0 0 0 / 8%),
           0 0 1px 0 rgb(0 0 0 / 6%), 0 0 0 0 rgb(0 0 0 / 4%);
@@ -57,7 +57,7 @@ import{r as v,i as g,e as u,t as d,s as b,y as p,a as f,m as w,o as _}from"./ts-
           border-color: var(--ts-white);
         }
       }
-    `];m([u()],c.prototype,"repository",2);m([d()],c.prototype,"repo",2);c=m([f("ts-card")],c);var P=Object.defineProperty,C=Object.getOwnPropertyDescriptor,h=(e,r,s,o)=>{for(var t=o>1?void 0:o?C(r,s):r,a=e.length-1,i;a>=0;a--)(i=e[a])&&(t=(o?i(r,s,t):i(t))||t);return o&&t&&P(r,s,t),t};let n=class extends b{constructor(){super(...arguments),this.list="",this.title="",this.repositories=[]}connectedCallback(){super.connectedCallback(),this.repositories=JSON.parse(this.list),this.title=y(JSON.parse(this.title))}render(){return p`
+    `];m([u()],l.prototype,"repository",2);m([d()],l.prototype,"repo",2);l=m([f("ts-card")],l);var P=Object.defineProperty,C=Object.getOwnPropertyDescriptor,h=(e,r,s,o)=>{for(var t=o>1?void 0:o?C(r,s):r,a=e.length-1,i;a>=0;a--)(i=e[a])&&(t=(o?i(r,s,t):i(t))||t);return o&&t&&P(r,s,t),t};let n=class extends b{constructor(){super(...arguments),this.list="",this.title="",this.repositories=[]}connectedCallback(){super.connectedCallback(),this.repositories=JSON.parse(this.list),this.title=y(JSON.parse(this.title))}render(){return p`
       <section>
         <h2>${this.title}</h2>
         <ul>
@@ -84,7 +84,7 @@ import{r as v,i as g,e as u,t as d,s as b,y as p,a as f,m as w,o as _}from"./ts-
         grid-auto-rows: 1fr;
         gap: 1.5rem;
       }
-    `];h([u()],n.prototype,"list",2);h([u()],n.prototype,"title",2);h([d()],n.prototype,"repositories",2);n=h([f("ts-section")],n);var j=Object.defineProperty,S=Object.getOwnPropertyDescriptor,x=(e,r,s,o)=>{for(var t=o>1?void 0:o?S(r,s):r,a=e.length-1,i;a>=0;a--)(i=e[a])&&(t=(o?i(r,s,t):i(t))||t);return o&&t&&j(r,s,t),t};const k="https://api.github.com/users/trustedshops-public/repos?per_page=100&type=owner",N=e=>{const r=new Map;return e.forEach(s=>{const[o]=s.topics.filter(a=>a.startsWith("ts"));if(!o)return;const t=o.substring(2);r.has(t)?r.set(t,[...r.get(t),s]):r.set(t,[s])}),r};let l=class extends b{constructor(){super(...arguments),this.data=new Map,this.intro=""}async connectedCallback(){super.connectedCallback();try{const r=await(await fetch("/intro.md")).text();this.intro=w.parse(r)}catch{this.intro="Normally you would see an intro here, but something went horribly wrong."}try{const r=await(await fetch(k)).json();this.data=N(r)}catch{alert(`Failed to load GitHub Repositories using Github API.
+    `];h([u()],n.prototype,"list",2);h([u()],n.prototype,"title",2);h([d()],n.prototype,"repositories",2);n=h([f("ts-section")],n);var j=Object.defineProperty,S=Object.getOwnPropertyDescriptor,x=(e,r,s,o)=>{for(var t=o>1?void 0:o?S(r,s):r,a=e.length-1,i;a>=0;a--)(i=e[a])&&(t=(o?i(r,s,t):i(t))||t);return o&&t&&j(r,s,t),t};const k="https://api.github.com/users/trustedshops-public/repos?per_page=100&type=owner",N=e=>{const r=new Map;return e.forEach(s=>{const[o]=s.topics.filter(a=>a.startsWith("ts"));if(!o)return;const t=o.substring(2);r.has(t)?r.set(t,[...r.get(t),s]):r.set(t,[s])}),r};let c=class extends b{constructor(){super(...arguments),this.data=new Map,this.intro=""}async connectedCallback(){super.connectedCallback();try{const r=await(await fetch("/intro.md")).text();this.intro=w.parse(r)}catch{this.intro="Normally you would see an intro here, but something went horribly wrong."}try{const r=await(await fetch(k)).json();this.data=N(r)}catch{alert(`Failed to load GitHub Repositories using Github API.
 It might be you have been refreshing the page to often or GitHub currently has problems.
 Please come back later or directly check on GitHub.
 Thank your for understanding. `)}}render(){return p`
@@ -115,7 +115,7 @@ Thank your for understanding. `)}}render(){return p`
               list='${JSON.stringify(r)}'
               title='${JSON.stringify(e)}'
             ></ts-section>`)}
-      </main> `}};l.styles=g`
+      </main> `}};c.styles=g`
     main {
       max-width: 1200px;
       margin: auto;
@@ -159,4 +159,4 @@ Thank your for understanding. `)}}render(){return p`
         fill: var(--background-color);
       }
     }
-  `;x([d()],l.prototype,"data",2);x([d()],l.prototype,"intro",2);l=x([f("ts-main")],l);
+  `;x([d()],c.prototype,"data",2);x([d()],c.prototype,"intro",2);c=x([f("ts-main")],c);
