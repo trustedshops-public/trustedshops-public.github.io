@@ -154,6 +154,8 @@ Please report this to https://github.com/markedjs/marked.`,e.silent)return"<p>An
 
     --ts-copy: normal normal var(--ts-font-weight-regular) normal
       var(--font-size-md) / var(--line-height-md) var(--ts-font-family);
+      
+      --column-count: 3;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -163,7 +165,10 @@ Please report this to https://github.com/markedjs/marked.`,e.silent)return"<p>An
     }
   }
 
-  @media (max-width: 576px) {
+  /*
+    mobile specific
+  */
+  @media (max-width: 600px) {
     :host {
       --font-size-3xl: 2.75rem;
       --font-size-2xl: 1.5rem;
@@ -176,6 +181,16 @@ Please report this to https://github.com/markedjs/marked.`,e.silent)return"<p>An
       --line-height-xl: normal;
       --line-height-lg: 1.5rem;
       --line-height-md: 1.5rem;
+      --column-count: 1;
+    }
+  }
+  
+  /*
+    tablet specific
+  */
+  @media(max-width: 1200px) {
+    :host {
+        --column-count: 2;
     }
   }
 
