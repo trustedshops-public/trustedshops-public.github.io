@@ -35,9 +35,10 @@ export class TsSection extends LitElement {
         padding: var(--font-size-lg);
         color: var(--font-color);
       }
+      
       ul {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
         grid-auto-rows: 1fr;
         gap: 1.5rem;
       }
