@@ -80,18 +80,25 @@ export class TsMain extends LitElement {
       margin: auto;
       position: relative;
     }
+    
     p {
       font: var(--ts-subheading);
       color: var(--font-color);
     }
+    
     .intro {
       background-color: var(--background-color);
       margin-top: -100px;
       border-radius: 40px 40px 0 0;
-      padding: 80px 150px 40px;
+      padding: 80px 20px 40px;
       position: relative;
       box-shadow: -30px -20px 30px -30px rgb(0 0 0 / 50%),
         30px -20px 30px -30px rgb(0 0 0 / 50%);
+    }
+    
+    .intro p {
+        max-width: 40em;
+        margin: auto;
     }
     
     .badge {
@@ -100,7 +107,7 @@ export class TsMain extends LitElement {
       right: 0;
       text-align:center;
       z-index: 10;
-      margin-top: -50px;
+      margin-top: -80px;
     }
     
     .badge svg {
@@ -113,13 +120,16 @@ export class TsMain extends LitElement {
     .badge circle {
       fill: var(--ts-black);
     }
+    
     .badge g {
       fill: var(--ts-white);
     }
+    
     @media (prefers-color-scheme: dark) {
       .badge circle {
         fill: var(--ts-white);
       }
+      
       .badge g {
         fill: var(--background-color);
       }

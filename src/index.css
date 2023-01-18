@@ -72,7 +72,10 @@
   }
 }
 
-@media (max-width: 576px) {
+/*
+    mobile and tablet specific
+  */
+@media (max-width: 1200px) {
   :root {
     --font-size-3xl: 2.75rem;
     --font-size-2xl: 1.5rem;
@@ -85,6 +88,19 @@
     --line-height-xl: normal;
     --line-height-lg: 1.5rem;
     --line-height-md: 1.5rem;
+  }
+
+  footer ul {
+    justify-content: center;
+  }
+
+  header h1 {
+    text-align: center;
+  }
+
+  header > div {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
 
@@ -144,7 +160,7 @@ menu > li {
 
 .button {
   background-color: var(--ts-blue-700);
-  color: var(--font-color);
+  color: var(--ts-gray-100);
   padding: 0.5rem 2.5rem;
   border-radius: 50px;
 
