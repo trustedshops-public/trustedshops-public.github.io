@@ -44,40 +44,56 @@ export class TsMain extends LitElement {
       margin: auto;
       position: relative;
     }
+    
     p {
       font: var(--ts-subheading);
       color: var(--font-color);
     }
+    
     .intro {
       background-color: var(--background-color);
-      border-radius: 40px 40px 0 0;
       margin-top: -100px;
-      padding: 80px 150px 40px;
-      padding-top: 80px;
+      border-radius: 40px 40px 0 0;
+      padding: 80px 20px 40px;
       position: relative;
       box-shadow: -30px -20px 30px -30px rgb(0 0 0 / 50%),
         30px -20px 30px -30px rgb(0 0 0 / 50%);
     }
+    
+    .intro p {
+        max-width: 40em;
+        margin: auto;
+    }
+    
     .badge {
       position: absolute;
-      padding: 1rem;
-      border-radius: 50%;
-      left: 50%;
-      top: -50%;
-      transform: translate(-50%, 50%);
-      background-color: var(--background-color);
-      box-shadow: 0px 0px 30px rgb(0 0 0 / 40%);
+      left: 0;
+      right: 0;
+      text-align:center;
+      z-index: 10;
+      margin-top: -80px;
     }
+    
+    .badge svg {
+       padding: 1rem;
+       border-radius: 50%;
+       background-color: var(--background-color);
+       box-shadow: 0px 0px 30px rgb(0 0 0 / 40%);
+    }
+
     .badge circle {
       fill: var(--ts-black);
     }
+    
     .badge g {
       fill: var(--ts-white);
     }
+    
     @media (prefers-color-scheme: dark) {
       .badge circle {
         fill: var(--ts-white);
       }
+      
       .badge g {
         fill: var(--background-color);
       }
@@ -87,25 +103,24 @@ export class TsMain extends LitElement {
   render() {
     return html`
       <main>
+        <div class='badge'>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 500 500'
+            width='100'
+          >
+            <circle class='cls-1' cx='250' cy='250' r='249' />
+            <g>
+              <path
+                d='M250,66A184.05,184.05,0,1,0,434.05,250,184,184,0,0,0,250,66Zm-1.52,299.43a116,116,0,1,1,116-116A116,116,0,0,1,248.48,365.38Z'
+              />
+              <path
+                d='M298.88,285.82C282,310.76,258.55,333.49,227,333.49c-33.37,0-52.8-20.9-52.8-54.63,0-54.63,40.33-108.16,97.16-108.16,19.06,0,44.73,7.7,44.73,30.8,0,41.43-64.9,55.36-96.8,63.43-1.1,7-2.19,13.93-2.19,20.89,0,14.3,7.69,27.5,23.46,27.5,20.53,0,37-19.8,49.13-34.46Zm-17.6-89.09c0-8.43-4.77-15-13.57-15-26.4,0-40,51.33-45.09,71.49C247.18,245.86,281.28,225.7,281.28,196.73Z'
+              />
+            </g>
+          </svg>
+        </div>
         <div class='intro'>
-          <div class='badge'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 500 500'
-              width='100'
-            >
-              <circle class='cls-1' cx='250' cy='250' r='249' />
-              <g>
-                <path
-                  d='M250,66A184.05,184.05,0,1,0,434.05,250,184,184,0,0,0,250,66Zm-1.52,299.43a116,116,0,1,1,116-116A116,116,0,0,1,248.48,365.38Z'
-                />
-                <path
-                  d='M298.88,285.82C282,310.76,258.55,333.49,227,333.49c-33.37,0-52.8-20.9-52.8-54.63,0-54.63,40.33-108.16,97.16-108.16,19.06,0,44.73,7.7,44.73,30.8,0,41.43-64.9,55.36-96.8,63.43-1.1,7-2.19,13.93-2.19,20.89,0,14.3,7.69,27.5,23.46,27.5,20.53,0,37-19.8,49.13-34.46Zm-17.6-89.09c0-8.43-4.77-15-13.57-15-26.4,0-40,51.33-45.09,71.49C247.18,245.86,281.28,225.7,281.28,196.73Z'
-                />
-              </g>
-            </svg>
-          </div>
-
           ${unsafeHTML(this.intro)}
         </div>
         ${Array.from(this.data).map(([title, repositories]) => {
