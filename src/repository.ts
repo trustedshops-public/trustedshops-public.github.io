@@ -12,12 +12,14 @@ export type Repository = {
   updated_at: string;
   topics: string[];
   [key: string]: unknown;
+  stargazers_count : number
 };
 
 export const getOrderedRepositories = (list: Repository[]): GroupRepository => {
   const data: GroupRepository = new Map();
+  const sorted = list.sort((a, b) => b.stargazers_count - a.stargazers_count)
 
-  list.forEach((item) => {
+  sorted.forEach((item) => {
     const [topic] = item.topics.filter((topic: string) =>
       topic.startsWith('ts')
     );
