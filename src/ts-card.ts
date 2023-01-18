@@ -1,7 +1,7 @@
 import { LitElement, css, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { rootStyles } from './rootStyles';
-import { Repository } from './ts-main';
+import { Repository } from './repository';
 import { capitaliseFirstLetterOfWord } from './util';
 
 @customElement('ts-card')
