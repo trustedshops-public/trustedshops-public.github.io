@@ -1,10 +1,10 @@
-import{r as v,i as g,e as u,t as d,s as b,y as p,a as f,m as w,o as _}from"./ts-wave-b7644c6b.js";const O="https://api.github.com/users/trustedshops-public/repos?per_page=100&type=owner",$=e=>{const r=new Map;return e.sort((o,t)=>t.stargazers_count-o.stargazers_count).forEach(o=>{const[t]=o.topics.filter(a=>a.startsWith("ts"));if(!t)return;const s=t.substring(2);r.has(s)?r.set(s,[...r.get(s),o]):r.set(s,[o])}),r};function y(e){return e.split("-").map(r=>`${r.charAt(0).toUpperCase()}${r.slice(1)}`).join(" ")}var P=Object.defineProperty,C=Object.getOwnPropertyDescriptor,m=(e,r,i,o)=>{for(var t=o>1?void 0:o?C(r,i):r,s=e.length-1,a;s>=0;s--)(a=e[s])&&(t=(o?a(r,i,t):a(t))||t);return o&&t&&P(r,i,t),t};let c=class extends b{constructor(){super(...arguments),this.repository="",this.repo={id:-1,name:"",html_url:"",description:"",created_at:"",updated_at:"",topics:[]}}connectedCallback(){super.connectedCallback(),this.repo=JSON.parse(this.repository),this.repo.name=y(this.repo.name)}render(){return p`
+import{r as y,i as u,e as f,t as d,s as b,y as p,a as m,m as _,o as O}from"./ts-wave-b7644c6b.js";const $="https://api.github.com/users/trustedshops-public/repos?per_page=100&type=owner",P=o=>{const r=new Map;return o.sort((e,t)=>t.stargazers_count-e.stargazers_count).forEach(e=>{const[t]=e.topics.filter(g=>g.startsWith("ts"));if(!t)return;const[a]=e.topics.filter(g=>g.startsWith("tp"));a&&(e.name=e.name.replace(a.replace("tp","")+"-",""));const s=t.substring(2);r.has(s)?r.set(s,[...r.get(s),e]):r.set(s,[e])}),new Map([...r.entries()].sort())};function w(o){return o.split("-").map(r=>`${r.charAt(0).toUpperCase()}${r.slice(1)}`).join(" ")}var C=Object.defineProperty,j=Object.getOwnPropertyDescriptor,x=(o,r,i,e)=>{for(var t=e>1?void 0:e?j(r,i):r,a=o.length-1,s;a>=0;a--)(s=o[a])&&(t=(e?s(r,i,t):s(t))||t);return e&&t&&C(r,i,t),t};let c=class extends b{constructor(){super(...arguments),this.repository="",this.repo={id:-1,name:"",html_url:"",description:"",created_at:"",updated_at:"",topics:[]}}connectedCallback(){super.connectedCallback(),this.repo=JSON.parse(this.repository),this.repo.name=w(this.repo.name)}render(){return p`
       <li class='card'>
         <a class='card-link' href='${this.repo.html_url}'>
           <h3>${this.repo.name}</h3>
           <p>${this.repo.description}</p>
         </a>
-      </li>`}};c.styles=[v,g`
+      </li>`}};c.styles=[y,u`
       .card {
         box-shadow: 0 2px 6px 0 rgb(0 0 0 / 14%), 0 1px 2px 0 rgb(0 0 0 / 8%),
           0 0 1px 0 rgb(0 0 0 / 6%), 0 0 0 0 rgb(0 0 0 / 4%);
@@ -57,16 +57,16 @@ import{r as v,i as g,e as u,t as d,s as b,y as p,a as f,m as w,o as _}from"./ts-
           border-color: var(--ts-white);
         }
       }
-    `];m([u()],c.prototype,"repository",2);m([d()],c.prototype,"repo",2);c=m([f("ts-card")],c);var j=Object.defineProperty,S=Object.getOwnPropertyDescriptor,h=(e,r,i,o)=>{for(var t=o>1?void 0:o?S(r,i):r,s=e.length-1,a;s>=0;s--)(a=e[s])&&(t=(o?a(r,i,t):a(t))||t);return o&&t&&j(r,i,t),t};let n=class extends b{constructor(){super(...arguments),this.list="",this.title="",this.repositories=[]}connectedCallback(){super.connectedCallback(),this.repositories=JSON.parse(this.list),this.title=y(JSON.parse(this.title))}render(){return p`
+    `];x([f()],c.prototype,"repository",2);x([d()],c.prototype,"repo",2);c=x([m("ts-card")],c);var S=Object.defineProperty,k=Object.getOwnPropertyDescriptor,h=(o,r,i,e)=>{for(var t=e>1?void 0:e?k(r,i):r,a=o.length-1,s;a>=0;a--)(s=o[a])&&(t=(e?s(r,i,t):s(t))||t);return e&&t&&S(r,i,t),t};let n=class extends b{constructor(){super(...arguments),this.list="",this.title="",this.repositories=[]}connectedCallback(){super.connectedCallback(),this.repositories=JSON.parse(this.list),this.title=w(JSON.parse(this.title))}render(){return p`
       <section>
         <h2>${this.title}</h2>
         <ul>
-          ${this.repositories.map(e=>p`
+          ${this.repositories.map(o=>p`
               <ts-card
-                repository='${JSON.stringify(e)}'
+                repository='${JSON.stringify(o)}'
               ></ts-card>`)}
         </ul>
-      </section>`}};n.styles=[v,g`
+      </section>`}};n.styles=[y,u`
       h2 {
         font: var(--ts-headline-2);
         margin-bottom: 1rem;
@@ -84,7 +84,7 @@ import{r as v,i as g,e as u,t as d,s as b,y as p,a as f,m as w,o as _}from"./ts-
         grid-auto-rows: 1fr;
         gap: 1.5rem;
       }
-    `];h([u()],n.prototype,"list",2);h([u()],n.prototype,"title",2);h([d()],n.prototype,"repositories",2);n=h([f("ts-section")],n);var k=Object.defineProperty,N=Object.getOwnPropertyDescriptor,x=(e,r,i,o)=>{for(var t=o>1?void 0:o?N(r,i):r,s=e.length-1,a;s>=0;s--)(a=e[s])&&(t=(o?a(r,i,t):a(t))||t);return o&&t&&k(r,i,t),t};let l=class extends b{constructor(){super(...arguments),this.data=new Map,this.intro=""}async connectedCallback(){super.connectedCallback();try{const r=await(await fetch("/intro.md")).text();this.intro=w.parse(r)}catch{this.intro="Normally you would see an intro here, but something went horribly wrong."}try{const r=await(await fetch(O)).json();this.data=$(r)}catch{alert(`Failed to load GitHub Repositories using Github API.
+    `];h([f()],n.prototype,"list",2);h([f()],n.prototype,"title",2);h([d()],n.prototype,"repositories",2);n=h([m("ts-section")],n);var N=Object.defineProperty,A=Object.getOwnPropertyDescriptor,v=(o,r,i,e)=>{for(var t=e>1?void 0:e?A(r,i):r,a=o.length-1,s;a>=0;a--)(s=o[a])&&(t=(e?s(r,i,t):s(t))||t);return e&&t&&N(r,i,t),t};let l=class extends b{constructor(){super(...arguments),this.data=new Map,this.intro=""}async connectedCallback(){super.connectedCallback();try{const r=await(await fetch("/intro.md")).text();this.intro=_.parse(r)}catch{this.intro="Normally you would see an intro here, but something went horribly wrong."}try{const r=await(await fetch($)).json();this.data=P(r)}catch{alert(`Failed to load GitHub Repositories using Github API.
 It might be you have been refreshing the page to often or GitHub currently has problems.
 Please come back later or directly check on GitHub.
 Thank your for understanding. `)}}render(){return p`
@@ -108,14 +108,14 @@ Thank your for understanding. `)}}render(){return p`
             </svg>
           </div>
 
-          ${_(this.intro)}
+          ${O(this.intro)}
         </div>
-        ${Array.from(this.data).map(([e,r])=>p`
+        ${Array.from(this.data).map(([o,r])=>p`
             <ts-section
               list='${JSON.stringify(r)}'
-              title='${JSON.stringify(e)}'
+              title='${JSON.stringify(o)}'
             ></ts-section>`)}
-      </main> `}};l.styles=g`
+      </main> `}};l.styles=u`
     main {
       max-width: 1200px;
       margin: auto;
@@ -159,4 +159,4 @@ Thank your for understanding. `)}}render(){return p`
         fill: var(--background-color);
       }
     }
-  `;x([d()],l.prototype,"data",2);x([d()],l.prototype,"intro",2);l=x([f("ts-main")],l);
+  `;v([d()],l.prototype,"data",2);v([d()],l.prototype,"intro",2);l=v([m("ts-main")],l);
