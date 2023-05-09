@@ -23,9 +23,6 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
-      - add_ssh_keys:
-          fingerprints:
-            - "8a:4f:2f:b9:d9:00:22:61:b7:f6:fb:8a:ff:52:49:ea"
       - run:
           name: Deploy to GitHub pages
           command: |
@@ -33,13 +30,15 @@ jobs:
             git config --global user.name "CircleCI Pipeline"
             echo "opensource.trustedshops.com" > build/CNAME
             echo "" > build/.nojekyll
-            npx gh-pages@2.0.1 --dist build/ --message "docs: Update github pages [ci skip]"
+            npx gh-pages@2.0.1 --dist build/ --message "docs: Update github pages [ci skip]" --repo "https://${GITHUB_TOKEN}@github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git"
 
 workflows:
   main:
     jobs:
       - build
       - deploy:
+          context:
+            - semantic-release
           requires:
             - build
           filters:
