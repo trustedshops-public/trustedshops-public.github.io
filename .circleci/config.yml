@@ -30,7 +30,7 @@ jobs:
             git config --global user.name "CircleCI Pipeline"
             echo "opensource.trustedshops.com" > build/CNAME
             echo "" > build/.nojekyll
-            npx gh-pages@2.0.1 --dist build/ --message "docs: Update github pages [ci skip]" --repo "https://${GITHUB_TOKEN}@github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git"
+            npx gh-pages@2.0.1 --dist build/ --message "docs: Update github pages [ci skip]" --repo "https://token:${GITHUB_TOKEN}@github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git"
 
 workflows:
   main:
