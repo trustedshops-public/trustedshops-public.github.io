@@ -197,10 +197,12 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@types/marked@^4.0.8":
-  version "4.0.8"
-  resolved "https://registry.npmjs.org/@types/marked/-/marked-4.0.8.tgz"
-  integrity sha512-HVNzMT5QlWCOdeuBsgXP8EZzKUf0+AXzN+sLmjvaB3ZlLqO+e4u0uXrdw9ub69wBKFs+c6/pA4r9sy6cCDvImw==
+"@types/marked@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.npmjs.org/@types/marked/-/marked-6.0.0.tgz"
+  integrity sha512-jmjpa4BwUsmhxcfsgUit/7A9KbrC48Q0q8KvnY107ogcjGgTFDlIL3RpihNpx2Mu1hM4mdFQjoVc4O6JoGKHsA==
+  dependencies:
+    marked "*"
 
 "@types/node@^18.11.18":
   version "18.11.18"
@@ -1308,7 +1310,7 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-marked@^4.2.5:
+marked@*, marked@^4.2.5:
   version "4.2.5"
   resolved "https://registry.npmjs.org/marked/-/marked-4.2.5.tgz"
   integrity sha512-jPueVhumq7idETHkb203WDD4fMA3yV9emQ5vLwop58lu8bTclMghBWcYAavlDqIEMaisADinV1TooIFCfqOsYQ==

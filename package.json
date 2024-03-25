@@ -19,7 +19,7 @@
     "marked": "^4.2.5"
   },
   "devDependencies": {
-    "@types/marked": "^4.0.8",
+    "@types/marked": "^6.0.0",
     "@types/node": "^18.11.18",
     "eslint": "^8.24.0",
     "eslint-plugin-lit": "^1.6.1",
