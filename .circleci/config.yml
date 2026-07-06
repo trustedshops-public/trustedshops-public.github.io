@@ -31,8 +31,8 @@ jobs:
             echo "" > build/.nojekyll
       - github-utils/publish_github_pages:
           folder: build/
-          git_commit_author_email: "no-reply@trustedshops.com"
-          git_commit_author_name: "trustedshops-public-cns-bot"
+          git_commit_author_email: 'no-reply@trustedshops.com'
+          git_commit_author_name: 'trustedshops-public-cns-bot'
 
 workflows:
   main:

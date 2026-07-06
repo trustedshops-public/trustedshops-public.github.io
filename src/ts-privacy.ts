@@ -51,17 +51,19 @@ export class TsPrivacy extends LitElement {
         padding-top: 80px;
         padding-bottom: 120px;
         position: relative;
-        box-shadow: -30px -20px 30px -30px rgb(0 0 0 / 50%),
+        box-shadow:
+          -30px -20px 30px -30px rgb(0 0 0 / 50%),
           30px -20px 30px -30px rgb(0 0 0 / 50%);
       }
-    `
+    `,
   ];
 
   render() {
     return html`
       <main>
-        <div class='intro'>${unsafeHTML(this.content)}</div>
-      </main> `;
+        <div class="intro">${unsafeHTML(this.content)}</div>
+      </main>
+    `;
   }
 }
 

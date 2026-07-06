@@ -20,12 +20,16 @@ export const getOrderedRepositories = (list: Repository[]): GroupRepository => {
   const sorted = list.sort((a, b) => b.stargazers_count - a.stargazers_count);
 
   sorted.forEach((item) => {
-    const [topic] = item.topics.filter((topic: string) => topic.startsWith('ts'));
+    const [topic] = item.topics.filter((topic: string) =>
+      topic.startsWith('ts'),
+    );
     if (!topic) {
       return;
     }
 
-    const [prefix] = item.topics.filter((topic: string) => topic.startsWith('tp'));
+    const [prefix] = item.topics.filter((topic: string) =>
+      topic.startsWith('tp'),
+    );
     if (prefix) {
       item.name = item.name.replace(prefix.replace('tp', '') + '-', '');
     }

@@ -35,28 +35,26 @@ export class TsSection extends LitElement {
         padding: var(--font-size-lg);
         color: var(--font-color);
       }
-      
+
       ul {
         display: grid;
         grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
         grid-auto-rows: 1fr;
         gap: 1.5rem;
       }
-    `
+    `,
   ];
 
   render() {
-    return html`
-      <section>
-        <h2>${this.title}</h2>
-        <ul>
-          ${this.repositories.map((repository) => {
-            return html`
-              <ts-card
-                repository='${JSON.stringify(repository)}'
-              ></ts-card>`;
+    return html` <section>
+      <h2>${this.title}</h2>
+      <ul>
+        ${this.repositories.map((repository) => {
+            return html` <ts-card
+              repository="${JSON.stringify(repository)}"
+            ></ts-card>`;
           })}
-        </ul>
-      </section>`;
+      </ul>
+    </section>`;
   }
 }

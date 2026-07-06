@@ -61,36 +61,33 @@ Despite all contractual and technical measures, it is possible that the level of
 
 As a data subject, you have the following rights:
 
--   pursuant to Art. 15 GDPR, you have the right to request information about your personal data processed by us to the extent described therein;
-    
--   pursuant to Art. 16 GDPR, you have the right to demand the immediate rectification of inaccurate or incomplete personal data stored by us;
-    
--   pursuant to Art. 17 GDPR, the right to request the erasure of your personal data stored with us, unless further processing is necessary:  
-    - in order to exercise the right of freedom of expression and information;  
-    - for the compliance with a legal obligation;  
-    - for reasons of public interest, or  
-    - for the establishment, exercise or defense of legal claims;
-    
--   pursuant to Art. 18 GDPR, the right to request the restriction of the processing of your personal data, insofar as:  
-    - you are contesting the accuracy of the data;  
-    - the processing is unlawful, but you oppose the erasure of the data;  
-    - we no longer need the data for the purposes of processing, but you require it for the establishment, exercise or defense of legal claims, or  
-    - you have objected to the processing pursuant to Art. 21 GDPR;
-    
+- pursuant to Art. 15 GDPR, you have the right to request information about your personal data processed by us to the extent described therein;
 
--   pursuant to Art. 20 GDPR, you have the right to receive your personal data that you have provided to us in a structured, commonly used and machine-readable format, or to request its transfer to another controller;
-    
--   pursuant to Art. 77 GDPR, the right to lodge a complaint with a supervisory authority . You can also contact the supervisory authority at your habitual residence or place of work, or at the place of our company headquarters.
-    
+- pursuant to Art. 16 GDPR, you have the right to demand the immediate rectification of inaccurate or incomplete personal data stored by us;
 
-If you have any questions regarding the collection, processing or use of your personal data, information on personal data concerning you, the restriction of data processing, the rectification or erasure of data, the revocation of given consent, or the objection to a specific use of data, please contact our company’s data protection officer.  
-  
+- pursuant to Art. 17 GDPR, the right to request the erasure of your personal data stored with us, unless further processing is necessary:
+  - in order to exercise the right of freedom of expression and information;
+  - for the compliance with a legal obligation;
+  - for reasons of public interest, or
+  - for the establishment, exercise or defense of legal claims;
+
+- pursuant to Art. 18 GDPR, the right to request the restriction of the processing of your personal data, insofar as:
+  - you are contesting the accuracy of the data;
+  - the processing is unlawful, but you oppose the erasure of the data;
+  - we no longer need the data for the purposes of processing, but you require it for the establishment, exercise or defense of legal claims, or
+  - you have objected to the processing pursuant to Art. 21 GDPR;
+
+- pursuant to Art. 20 GDPR, you have the right to receive your personal data that you have provided to us in a structured, commonly used and machine-readable format, or to request its transfer to another controller;
+
+- pursuant to Art. 77 GDPR, the right to lodge a complaint with a supervisory authority . You can also contact the supervisory authority at your habitual residence or place of work, or at the place of our company headquarters.
+
+If you have any questions regarding the collection, processing or use of your personal data, information on personal data concerning you, the restriction of data processing, the rectification or erasure of data, the revocation of given consent, or the objection to a specific use of data, please contact our company’s data protection officer.
+
 Data Protection Officer  
 Subbelrather Str. 15c  
 50823 Cologne  
 [privacy@trustedshops.com](mailto:privacy@trustedshops.com)
 
-  
 Right of objection
 
 Insofar as we process personal data in any of the above described manners in order to protect our legitimate interests that are overriding in the process of balancing of interests, you can object to this processing with effect for the future. If the data is processed for direct marketing purposes, you can exercise this right at any time as described above. If the processing takes place for other purposes, you are only entitled to a right of objection as far as it is justified for reasons arising from your particular situation.
