@@ -20,7 +20,7 @@ export class TsMain extends LitElement {
       const textResponse = await fetch('/intro.md');
       const text = await textResponse.text();
       this.intro = marked.parse(text);
-    } catch (e) {
+    } catch {
       this.intro = 'Normally you would see an intro here, but something went horribly wrong.';
     }
 
@@ -28,7 +28,7 @@ export class TsMain extends LitElement {
       const response = await fetch(githubApi);
       const rawList: Repository[] = await response.json();
       this.data = getOrderedRepositories(rawList);
-    } catch (e) {
+    } catch {
       alert(
         'Failed to load GitHub Repositories using Github API.\n' +
         'It might be you have been refreshing the page to often or GitHub currently has problems.\n' +
@@ -44,12 +44,12 @@ export class TsMain extends LitElement {
       margin: auto;
       position: relative;
     }
-    
+
     p {
       font: var(--ts-subheading);
       color: var(--font-color);
     }
-    
+
     .intro {
       background-color: var(--background-color);
       margin-top: -100px;
@@ -59,12 +59,12 @@ export class TsMain extends LitElement {
       box-shadow: -30px -20px 30px -30px rgb(0 0 0 / 50%),
         30px -20px 30px -30px rgb(0 0 0 / 50%);
     }
-    
+
     .intro p {
         max-width: 40em;
         margin: auto;
     }
-    
+
     .badge {
       position: absolute;
       left: 0;
@@ -73,7 +73,7 @@ export class TsMain extends LitElement {
       z-index: 10;
       margin-top: -80px;
     }
-    
+
     .badge svg {
        padding: 1rem;
        border-radius: 50%;
@@ -84,16 +84,16 @@ export class TsMain extends LitElement {
     .badge circle {
       fill: var(--ts-black);
     }
-    
+
     .badge g {
       fill: var(--ts-white);
     }
-    
+
     @media (prefers-color-scheme: dark) {
       .badge circle {
         fill: var(--ts-white);
       }
-      
+
       .badge g {
         fill: var(--background-color);
       }

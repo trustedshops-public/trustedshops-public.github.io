@@ -15,7 +15,7 @@ export class TsPrivacy extends LitElement {
       const response = await fetch('/privacy-text.md');
       const text = await response.text();
       this.content = marked.parse(text);
-    } catch (e) {
+    } catch {
       this.content = 'Failed to load privacy statement.';
     }
   }

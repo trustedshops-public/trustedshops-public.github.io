@@ -16,7 +16,8 @@ export class TsCard extends LitElement {
     description: '',
     created_at: '',
     updated_at: '',
-    topics: []
+    topics: [],
+    stargazers_count: 0
   };
 
   connectedCallback(): void {
