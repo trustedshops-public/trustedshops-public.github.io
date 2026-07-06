@@ -1,7 +1,8 @@
 version: '2.1'
 
 orbs:
-  node: circleci/node@5.1.0
+  node: circleci/node@5.1.1
+  github-utils: trustedshops-public/github-utils@1.1.3
 
 jobs:
   build:
@@ -23,23 +24,23 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
-      - add_ssh_keys:
-          fingerprints:
-            - "8a:4f:2f:b9:d9:00:22:61:b7:f6:fb:8a:ff:52:49:ea"
       - run:
-          name: Deploy to GitHub pages
+          name: Enrich build
           command: |
-            git config --global user.email "no-reply@trustedshops.com"
-            git config --global user.name "CircleCI Pipeline"
             echo "opensource.trustedshops.com" > build/CNAME
             echo "" > build/.nojekyll
-            npx gh-pages@2.0.1 --dist build/ --message "docs: Update github pages [ci skip]"
+      - github-utils/publish_github_pages:
+          folder: build/
+          git_commit_author_email: "no-reply@trustedshops.com"
+          git_commit_author_name: "trustedshops-public-cns-bot"
 
 workflows:
   main:
     jobs:
       - build
       - deploy:
+          context:
+            - semantic-release
           requires:
             - build
           filters:
