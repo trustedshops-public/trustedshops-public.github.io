@@ -50,10 +50,10 @@ export class TsSection extends LitElement {
       <h2>${this.title}</h2>
       <ul>
         ${this.repositories.map((repository) => {
-            return html` <ts-card
-              repository="${JSON.stringify(repository)}"
-            ></ts-card>`;
-          })}
+          return html` <ts-card
+            repository="${JSON.stringify(repository)}"
+          ></ts-card>`;
+        })}
       </ul>
     </section>`;
   }
