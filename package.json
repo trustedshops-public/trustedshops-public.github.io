@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "lit": "^3.0.0",
-    "marked": "^4.2.5"
+    "marked": "^18.0.0"
   },
   "devDependencies": {
     "@types/marked": "^6.0.0",
