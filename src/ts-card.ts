@@ -16,7 +16,8 @@ export class TsCard extends LitElement {
     description: '',
     created_at: '',
     updated_at: '',
-    topics: []
+    topics: [],
+    stargazers_count: 0,
   };
 
   connectedCallback(): void {
@@ -29,8 +30,11 @@ export class TsCard extends LitElement {
     rootStyles,
     css`
       .card {
-        box-shadow: 0 2px 6px 0 rgb(0 0 0 / 14%), 0 1px 2px 0 rgb(0 0 0 / 8%),
-          0 0 1px 0 rgb(0 0 0 / 6%), 0 0 0 0 rgb(0 0 0 / 4%);
+        box-shadow:
+          0 2px 6px 0 rgb(0 0 0 / 14%),
+          0 1px 2px 0 rgb(0 0 0 / 8%),
+          0 0 1px 0 rgb(0 0 0 / 6%),
+          0 0 0 0 rgb(0 0 0 / 4%);
         background-color: var(--background-color);
         border-radius: 1rem;
         list-style: none;
@@ -48,8 +52,11 @@ export class TsCard extends LitElement {
         text-decoration: none;
       }
       .card:hover {
-        box-shadow: 0 6px 10px 0 rgb(0 0 0 / 14%), 0 3px 4px 0 rgb(0 0 0 / 8%),
-          0 2px 3px 0 rgb(0 0 0 / 6%), 0 2px 2px 0 rgb(0 0 0 / 4%);
+        box-shadow:
+          0 6px 10px 0 rgb(0 0 0 / 14%),
+          0 3px 4px 0 rgb(0 0 0 / 8%),
+          0 2px 3px 0 rgb(0 0 0 / 6%),
+          0 2px 2px 0 rgb(0 0 0 / 4%);
         transform: translateY(-0.5rem);
         transition: transform 0.2s ease-in-out;
       }
@@ -80,16 +87,15 @@ export class TsCard extends LitElement {
           border-color: var(--ts-white);
         }
       }
-    `
+    `,
   ];
 
   render() {
-    return html`
-      <li class='card'>
-        <a class='card-link' href='${this.repo.html_url}'>
-          <h3>${this.repo.name}</h3>
-          <p>${this.repo.description}</p>
-        </a>
-      </li>`;
+    return html` <li class="card">
+      <a class="card-link" href="${this.repo.html_url}">
+        <h3>${this.repo.name}</h3>
+        <p>${this.repo.description}</p>
+      </a>
+    </li>`;
   }
 }

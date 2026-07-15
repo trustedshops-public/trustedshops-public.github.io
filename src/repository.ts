@@ -12,7 +12,7 @@ export type Repository = {
   updated_at: string;
   topics: string[];
   [key: string]: unknown;
-  stargazers_count: number
+  stargazers_count: number;
 };
 
 export const getOrderedRepositories = (list: Repository[]): GroupRepository => {
@@ -20,21 +20,27 @@ export const getOrderedRepositories = (list: Repository[]): GroupRepository => {
   const sorted = list.sort((a, b) => b.stargazers_count - a.stargazers_count);
 
   sorted.forEach((item) => {
-    const [topic] = item.topics.filter((topic: string) => topic.startsWith('ts'));
+    const [topic] = item.topics.filter((topic: string) =>
+      topic.startsWith('ts'),
+    );
     if (!topic) {
       return;
     }
 
-    const [prefix] = item.topics.filter((topic: string) => topic.startsWith('tp'));
+    const [prefix] = item.topics.filter((topic: string) =>
+      topic.startsWith('tp'),
+    );
     if (prefix) {
-      item.name = item.name.replace(prefix.replace("tp","") + "-", '');
+      item.name = item.name.replace(prefix.replace('tp', '') + '-', '');
     }
 
     const title = topic.substring(2);
 
-    data.has(title)
-      ? data.set(title, [...data.get(title)!, item])
-      : data.set(title, [item]);
+    if (data.has(title)) {
+      data.set(title, [...data.get(title)!, item]);
+    } else {
+      data.set(title, [item]);
+    }
   });
   return new Map([...data.entries()].sort());
 };
