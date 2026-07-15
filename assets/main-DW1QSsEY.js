@@ -264,7 +264,7 @@ Please report this to https://github.com/markedjs/marked.`,e){let e=`<p>An error
             repository="${JSON.stringify(e)}"
           ></ts-card>`)}
       </ul>
-    </section>`}};Z([k()],Q.prototype,`list`,void 0),Z([k()],Q.prototype,`title`,void 0),Z([A()],Q.prototype,`repositories`,void 0),Q=Z([Le(`ts-section`)],Q);var dn=class extends O{constructor(...e){super(...e),this.data=new Map,this.intro=``}async connectedCallback(){super.connectedCallback();try{let e=await(await fetch(`/intro.md`)).text();this.intro=X.parse(e)}catch{this.intro=`Normally you would see an intro here, but something went horribly wrong.`}try{let e=await(await fetch(on)).json();this.data=sn(e)}catch{alert(`Failed to load GitHub Repositories using Github API.
+    </section>`}};Z([k()],Q.prototype,`list`,void 0),Z([k()],Q.prototype,`title`,void 0),Z([A()],Q.prototype,`repositories`,void 0),Q=Z([Le(`ts-section`)],Q);var dn=class extends O{constructor(...e){super(...e),this.data=new Map,this.intro=``}async connectedCallback(){super.connectedCallback();try{let e=await(await fetch(`/intro.md`)).text();this.intro=await X.parse(e)}catch{this.intro=`Normally you would see an intro here, but something went horribly wrong.`}try{let e=await(await fetch(on)).json();this.data=sn(e)}catch{alert(`Failed to load GitHub Repositories using Github API.
 It might be you have been refreshing the page to often or GitHub currently has problems.
 Please come back later or directly check on GitHub.
 Thank your for understanding. `)}}static{this.styles=o`
