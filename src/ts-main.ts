@@ -23,7 +23,7 @@ export class TsMain extends LitElement {
     try {
       const textResponse = await fetch('/intro.md');
       const text = await textResponse.text();
-      this.intro = marked.parse(text);
+      this.intro = await marked.parse(text);
     } catch {
       this.intro =
         'Normally you would see an intro here, but something went horribly wrong.';
