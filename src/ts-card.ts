@@ -18,6 +18,8 @@ export class TsCard extends LitElement {
     updated_at: '',
     topics: [],
     stargazers_count: 0,
+    lastActivityDate: '',
+    type: 'fallback',
   };
 
   connectedCallback(): void {
@@ -70,6 +72,15 @@ export class TsCard extends LitElement {
         color: var(--font-color);
         flex: 1;
       }
+      .card-footer {
+        display: flex;
+        gap: 1rem;
+        font-size: 0.875rem;
+        color: var(--ts-gray-600);
+        margin-top: auto;
+        border-top: 1px solid var(--ts-gray-200);
+        padding-top: 0.75rem;
+      }
       ul {
         display: flex;
         gap: 0.5rem;
@@ -91,10 +102,23 @@ export class TsCard extends LitElement {
   ];
 
   render() {
+    const lastDate = new Date(this.repo.lastActivityDate).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    });
+
     return html` <li class="card">
       <a class="card-link" href="${this.repo.html_url}">
-        <h3>${this.repo.name}</h3>
-        <p>${this.repo.description}</p>
+        <div>
+          <h3>${this.repo.name}</h3>
+          <p>${this.repo.description}</p>
+        </div>
+        <footer class="card-footer">
+          <span>⭐ ${this.repo.stargazers_count}</span>
+          <span>📅 ${lastDate}</span>
+          ${this.repo.releaseVersion ? html`<span>🏷️ ${this.repo.releaseVersion}</span>` : ''}
+        </footer>
       </a>
     </li>`;
   }
