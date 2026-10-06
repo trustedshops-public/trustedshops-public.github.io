@@ -2,13 +2,7 @@ import { LitElement, css, html } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import { marked } from 'marked';
-import {
-  GroupRepository,
-  Repository,
-  RepoMetadata,
-  getOrderedRepositories,
-  githubApi,
-} from './repository';
+import { GroupRepository, Repository, getOrderedRepositories } from './repository';
 import './ts-section.ts';
 
 @customElement('ts-main')
@@ -31,21 +25,14 @@ export class TsMain extends LitElement {
     }
 
     try {
-      const [reposResponse, metadataResponse] = await Promise.all([
-        fetch(githubApi),
-        fetch('/repos-metadata.json').catch(() => null),
-      ]);
-      const rawList: Repository[] = await reposResponse.json();
-      const metadata: RepoMetadata[] = metadataResponse
-        ? await metadataResponse.json()
-        : [];
-      this.data = getOrderedRepositories(rawList, metadata);
+      const response = await fetch('/repos-metadata.json');
+      const repos: Repository[] = await response.json();
+      this.data = getOrderedRepositories(repos);
     } catch {
       alert(
-        'Failed to load GitHub Repositories using Github API.\n' +
-          'It might be you have been refreshing the page to often or GitHub currently has problems.\n' +
-          'Please come back later or directly check on GitHub.\n' +
-          'Thank your for understanding. ',
+        'Failed to load repository metadata.\n' +
+          'Please refresh the page or come back later.\n' +
+          'Thank you for understanding.',
       );
     }
   }

@@ -1,8 +1,3 @@
-export const githubApi =
-  'https://api.github.com/users/trustedshops-public/repos?per_page=100&type=owner';
-
-export type GroupRepository = Map<string, Repository[]>;
-
 export type Repository = {
   id: number;
   name: string;
@@ -11,25 +6,19 @@ export type Repository = {
   created_at: string;
   updated_at: string;
   topics: string[];
-  [key: string]: unknown;
   stargazers_count: number;
-};
-
-export type RepoMetadata = {
-  name: string;
   lastActivityDate: string;
   type: 'release' | 'commit' | 'pushed_at' | 'fallback';
 };
 
-export const getOrderedRepositories = (list: Repository[], metadata: RepoMetadata[]): GroupRepository => {
-  const data: GroupRepository = new Map();
-  const metadataMap = new Map(metadata.map(m => [m.name, m]));
+export type GroupRepository = Map<string, Repository[]>;
 
-  const sorted = list.sort((a, b) => {
-    const dateA = metadataMap.get(a.name)?.lastActivityDate || a.updated_at;
-    const dateB = metadataMap.get(b.name)?.lastActivityDate || b.updated_at;
-    return new Date(dateB).getTime() - new Date(dateA).getTime();
-  });
+export const getOrderedRepositories = (list: Repository[]): GroupRepository => {
+  const data: GroupRepository = new Map();
+
+  const sorted = list.sort((a, b) =>
+    new Date(b.lastActivityDate).getTime() - new Date(a.lastActivityDate).getTime()
+  );
 
   sorted.forEach((item) => {
     const [topic] = item.topics.filter((topic: string) =>

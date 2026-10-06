@@ -18,7 +18,7 @@ async function fetchWithRetry(url, retries = 3) {
   }
 }
 
-async function getRepoMetadata(repo) {
+async function getLastActivityDate(repo) {
   try {
     // Try to get latest release
     const releases = await fetchWithRetry(
@@ -26,11 +26,7 @@ async function getRepoMetadata(repo) {
     );
 
     if (releases.published_at) {
-      return {
-        name: repo.name,
-        lastActivityDate: releases.published_at,
-        type: 'release',
-      };
+      return { lastActivityDate: releases.published_at, type: 'release' };
     }
   } catch (err) {
     // No releases, that's ok
@@ -44,7 +40,6 @@ async function getRepoMetadata(repo) {
 
     if (Array.isArray(commits) && commits[0]) {
       return {
-        name: repo.name,
         lastActivityDate: commits[0].commit.committer.date,
         type: 'commit',
       };
@@ -54,11 +49,7 @@ async function getRepoMetadata(repo) {
   }
 
   // Fallback to repo's pushed_at
-  return {
-    name: repo.name,
-    lastActivityDate: repo.pushed_at,
-    type: 'pushed_at',
-  };
+  return { lastActivityDate: repo.pushed_at, type: 'pushed_at' };
 }
 
 async function main() {
@@ -67,19 +58,38 @@ async function main() {
     `https://api.github.com/users/${ORG}/repos?per_page=100&type=owner`
   );
 
-  console.log(`Found ${repos.length} repos. Fetching metadata...`);
+  console.log(`Found ${repos.length} repos. Fetching activity dates...`);
   const metadata = [];
 
   for (const repo of repos) {
     try {
-      const data = await getRepoMetadata(repo);
-      metadata.push(data);
-      console.log(`✓ ${data.name} (${data.type})`);
+      const { lastActivityDate, type } = await getLastActivityDate(repo);
+      const entry = {
+        id: repo.id,
+        name: repo.name,
+        html_url: repo.html_url,
+        description: repo.description,
+        created_at: repo.created_at,
+        updated_at: repo.updated_at,
+        topics: repo.topics,
+        stargazers_count: repo.stargazers_count,
+        lastActivityDate,
+        type,
+      };
+      metadata.push(entry);
+      console.log(`✓ ${repo.name} (${type})`);
     } catch (err) {
       console.error(`✗ ${repo.name}: ${err.message}`);
-      // Add fallback
+      // Add fallback with available data
       metadata.push({
+        id: repo.id,
         name: repo.name,
+        html_url: repo.html_url,
+        description: repo.description,
+        created_at: repo.created_at,
+        updated_at: repo.updated_at,
+        topics: repo.topics,
+        stargazers_count: repo.stargazers_count,
         lastActivityDate: repo.pushed_at,
         type: 'fallback',
       });
