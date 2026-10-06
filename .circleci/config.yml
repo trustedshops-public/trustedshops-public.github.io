@@ -31,12 +31,6 @@ jobs:
       - run:
           name: Build with vite
           command: yarn run build
-      - run:
-          name: Copy repos metadata to build
-          command: |
-            if [ -f repos-metadata.json ]; then
-              cp repos-metadata.json build/
-            fi
       - persist_to_workspace:
           root: .
           paths:

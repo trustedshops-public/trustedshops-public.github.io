@@ -18,7 +18,7 @@ yarn format
 
 ### Repository Metadata
 
-Repositories are sorted by their most meaningful activity date (latest release or main branch commit). The metadata is generated daily by CircleCI and stored in `repos-metadata.json`.
+Repositories are sorted by their most meaningful activity date (latest release or main branch commit). The metadata is generated daily by CircleCI and stored in `public/repos-metadata.json`, which is automatically included in the build.
 
 For local development, generate metadata manually:
 
@@ -28,4 +28,4 @@ GITHUB_TOKEN=<your-token> yarn metadata
 
 Requires a GitHub Personal Access Token with `repo:status` scope (to read repository data).
 
-Without the metadata file, repositories fall back to sorting by `updated_at` (which includes metadata changes). The metadata file is optional—the app works without it.
+The metadata file is optional—if unavailable, the app still works but may have different sort order.

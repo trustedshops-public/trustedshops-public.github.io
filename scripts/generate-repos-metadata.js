@@ -97,9 +97,9 @@ async function main() {
     }
   }
 
-  console.log(`Writing metadata to repos-metadata.json...`);
+  console.log(`Writing metadata to public/repos-metadata.json...`);
   fs.writeFileSync(
-    'repos-metadata.json',
+    'public/repos-metadata.json',
     JSON.stringify(metadata, null, 2)
   );
 
