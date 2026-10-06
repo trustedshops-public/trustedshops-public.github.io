@@ -174,7 +174,7 @@ Please report this to https://github.com/markedjs/marked.`,e){let e=`<p>An error
     box-sizing: border-box;
     font: var(--ts-copy);
   }
-`;function cn(e){return e.split(`-`).map(e=>`${e.charAt(0).toUpperCase()}${e.slice(1)}`).join(` `)}function Z(e,t,n,r){var i=arguments.length,a=i<3?t:r===null?r=Object.getOwnPropertyDescriptor(t,n):r,o;if(typeof Reflect==`object`&&typeof Reflect.decorate==`function`)a=Reflect.decorate(e,t,n,r);else for(var s=e.length-1;s>=0;s--)(o=e[s])&&(a=(i<3?o(a):i>3?o(t,n,a):o(t,n))||a);return i>3&&a&&Object.defineProperty(t,n,a),a}var ln=class extends O{constructor(...e){super(...e),this.repository=``,this.repo={id:-1,name:``,html_url:``,description:``,created_at:``,updated_at:``,topics:[],stargazers_count:0}}connectedCallback(){super.connectedCallback(),this.repo=JSON.parse(this.repository),this.repo.name=cn(this.repo.name)}static{this.styles=[sn,o`
+`;function cn(e){return e.split(`-`).map(e=>`${e.charAt(0).toUpperCase()}${e.slice(1)}`).join(` `)}function Z(e,t,n,r){var i=arguments.length,a=i<3?t:r===null?r=Object.getOwnPropertyDescriptor(t,n):r,o;if(typeof Reflect==`object`&&typeof Reflect.decorate==`function`)a=Reflect.decorate(e,t,n,r);else for(var s=e.length-1;s>=0;s--)(o=e[s])&&(a=(i<3?o(a):i>3?o(t,n,a):o(t,n))||a);return i>3&&a&&Object.defineProperty(t,n,a),a}var ln=class extends O{constructor(...e){super(...e),this.repository=``,this.repo={id:-1,name:``,html_url:``,description:``,created_at:``,updated_at:``,topics:[],stargazers_count:0,lastActivityDate:``,type:`fallback`}}connectedCallback(){super.connectedCallback(),this.repo=JSON.parse(this.repository),this.repo.name=cn(this.repo.name)}static{this.styles=[sn,o`
       .card {
         box-shadow:
           0 2px 6px 0 rgb(0 0 0 / 14%),
@@ -216,6 +216,21 @@ Please report this to https://github.com/markedjs/marked.`,e){let e=`<p>An error
         color: var(--font-color);
         flex: 1;
       }
+      .card-footer {
+        display: flex;
+        gap: 1rem;
+        margin-top: auto;
+        padding-top: 0.75rem;
+        border-top: 1px solid var(--ts-gray-100);
+        color: var(--ts-gray-500);
+      }
+      .card-footer * {
+        font-size: 0.875rem;
+      }
+      .card-footer svg {
+        height: 100%;
+        vertical-align: text-bottom;
+      }
       ul {
         display: flex;
         gap: 0.5rem;
@@ -233,10 +248,32 @@ Please report this to https://github.com/markedjs/marked.`,e){let e=`<p>An error
           border-color: var(--ts-white);
         }
       }
-    `]}render(){return C` <li class="card">
+    `]}render(){let e=new Date,t=new Date(this.repo.lastActivityDate),n=Math.floor((e.getTime()-t.getTime())/1e3),r;return r=n<60?`just now`:n<3600?`${Math.floor(n/60)}m ago`:n<86400?`${Math.floor(n/3600)}h ago`:n<2592e3?`${Math.floor(n/86400)}d ago`:n<31536e3?`${Math.floor(n/2592e3)}mo ago`:`${Math.floor(n/31536e3)}y ago`,C` <li class="card">
       <a class="card-link" href="${this.repo.html_url}">
-        <h3>${this.repo.name}</h3>
-        <p>${this.repo.description}</p>
+        <div>
+          <h3>${this.repo.name}</h3>
+          <p>${this.repo.description}</p>
+        </div>
+        <footer class="card-footer">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+              <path d="M0 0h16v16H0z" fill="none" />
+              <path fill="#59636e" d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815l4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97l.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45l2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084l2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456l-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183l-3.096-.45a.75.75 0 0 1-.564-.41z" />
+            </svg>
+            ${this.repo.stargazers_count}</span>
+          <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path d="M0 0h16v16H0z" fill="none" />
+            <path fill="#59636e" d="M4.75 0a.75.75 0 0 1 .75.75V2h5V.75a.75.75 0 0 1 1.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 13.25 16H2.75A1.75 1.75 0 0 1 1 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 0 1 4.75 0M2.5 7.5v6.75c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25V7.5Zm10.75-4H2.75a.25.25 0 0 0-.25.25V6h11V3.75a.25.25 0 0 0-.25-.25" />
+          </svg>
+          ${r}</span>
+          ${this.repo.releaseVersion?C`<span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path d="M0 0h16v16H0z" fill="none" />
+            <path fill="#1a7f37" d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775m1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2a1 1 0 0 1 0-2" />
+          </svg>
+          ${this.repo.releaseVersion}</span>`:``}
+        </footer>
       </a>
     </li>`}};Z([k()],ln.prototype,`repository`,void 0),Z([A()],ln.prototype,`repo`,void 0),ln=Z([Le(`ts-card`)],ln);var Q=class extends O{constructor(...e){super(...e),this.list=``,this.title=``,this.repositories=[]}connectedCallback(){super.connectedCallback(),this.repositories=JSON.parse(this.list),this.title=cn(JSON.parse(this.title))}static{this.styles=[sn,o`
       h2 {
