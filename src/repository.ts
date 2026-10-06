@@ -9,6 +9,7 @@ export type Repository = {
   stargazers_count: number;
   lastActivityDate: string;
   type: 'release' | 'commit' | 'pushed_at' | 'fallback';
+  releaseVersion?: string;
 };
 
 export type GroupRepository = Map<string, Repository[]>;

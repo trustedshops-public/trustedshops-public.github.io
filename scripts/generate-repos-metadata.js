@@ -26,7 +26,11 @@ async function getLastActivityDate(repo) {
     );
 
     if (releases.published_at) {
-      return { lastActivityDate: releases.published_at, type: 'release' };
+      return {
+        lastActivityDate: releases.published_at,
+        type: 'release',
+        releaseVersion: releases.tag_name,
+      };
     }
   } catch (err) {
     // No releases, that's ok
@@ -64,7 +68,7 @@ async function main() {
 
   for (const repo of repos) {
     try {
-      const { lastActivityDate, type } = await getLastActivityDate(repo);
+      const { lastActivityDate, type, releaseVersion } = await getLastActivityDate(repo);
       const entry = {
         id: repo.id,
         name: repo.name,
@@ -76,9 +80,10 @@ async function main() {
         stargazers_count: repo.stargazers_count,
         lastActivityDate,
         type,
+        ...(releaseVersion && { releaseVersion }),
       };
       metadata.push(entry);
-      console.log(`✓ ${repo.name} (${type})`);
+      console.log(`✓ ${repo.name} (${type}${releaseVersion ? ` - ${releaseVersion}` : ''})`);
     } catch (err) {
       console.error(`✗ ${repo.name}: ${err.message}`);
       // Add fallback with available data
