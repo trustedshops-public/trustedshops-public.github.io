@@ -10,15 +10,26 @@ export type Repository = {
   description: string;
   created_at: string;
   updated_at: string;
-  pushed_at: string;
   topics: string[];
   [key: string]: unknown;
   stargazers_count: number;
 };
 
-export const getOrderedRepositories = (list: Repository[]): GroupRepository => {
+export type RepoMetadata = {
+  name: string;
+  lastActivityDate: string;
+  type: 'release' | 'commit' | 'pushed_at' | 'fallback';
+};
+
+export const getOrderedRepositories = (list: Repository[], metadata: RepoMetadata[]): GroupRepository => {
   const data: GroupRepository = new Map();
-  const sorted = list.sort((a, b) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime());
+  const metadataMap = new Map(metadata.map(m => [m.name, m]));
+
+  const sorted = list.sort((a, b) => {
+    const dateA = metadataMap.get(a.name)?.lastActivityDate || a.updated_at;
+    const dateB = metadataMap.get(b.name)?.lastActivityDate || b.updated_at;
+    return new Date(dateB).getTime() - new Date(dateA).getTime();
+  });
 
   sorted.forEach((item) => {
     const [topic] = item.topics.filter((topic: string) =>

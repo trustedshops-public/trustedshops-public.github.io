@@ -5,6 +5,7 @@ import { marked } from 'marked';
 import {
   GroupRepository,
   Repository,
+  RepoMetadata,
   getOrderedRepositories,
   githubApi,
 } from './repository';
@@ -30,9 +31,15 @@ export class TsMain extends LitElement {
     }
 
     try {
-      const response = await fetch(githubApi);
-      const rawList: Repository[] = await response.json();
-      this.data = getOrderedRepositories(rawList);
+      const [reposResponse, metadataResponse] = await Promise.all([
+        fetch(githubApi),
+        fetch('/repos-metadata.json').catch(() => null),
+      ]);
+      const rawList: Repository[] = await reposResponse.json();
+      const metadata: RepoMetadata[] = metadataResponse
+        ? await metadataResponse.json()
+        : [];
+      this.data = getOrderedRepositories(rawList, metadata);
     } catch {
       alert(
         'Failed to load GitHub Repositories using Github API.\n' +
