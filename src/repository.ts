@@ -10,6 +10,7 @@ export type Repository = {
   description: string;
   created_at: string;
   updated_at: string;
+  pushed_at: string;
   topics: string[];
   [key: string]: unknown;
   stargazers_count: number;
@@ -17,7 +18,7 @@ export type Repository = {
 
 export const getOrderedRepositories = (list: Repository[]): GroupRepository => {
   const data: GroupRepository = new Map();
-  const sorted = list.sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
+  const sorted = list.sort((a, b) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime());
 
   sorted.forEach((item) => {
     const [topic] = item.topics.filter((topic: string) =>
