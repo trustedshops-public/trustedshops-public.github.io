@@ -25,7 +25,8 @@
     ],
     "stargazers_count": 0,
     "lastActivityDate": "2026-08-24T12:19:54Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "v1.2.6"
   },
   {
     "id": 456572539,
@@ -75,7 +76,8 @@
     ],
     "stargazers_count": 1,
     "lastActivityDate": "2023-06-29T09:30:26Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "3.0.2"
   },
   {
     "id": 422193101,
@@ -93,7 +95,8 @@
     ],
     "stargazers_count": 4,
     "lastActivityDate": "2023-05-26T07:02:47Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "3.0.0"
   },
   {
     "id": 660114361,
@@ -113,7 +116,8 @@
     ],
     "stargazers_count": 0,
     "lastActivityDate": "2026-07-28T13:11:18Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "1.3.1"
   },
   {
     "id": 452763957,
@@ -130,7 +134,8 @@
     ],
     "stargazers_count": 2,
     "lastActivityDate": "2023-05-26T07:22:08Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "2.0.0"
   },
   {
     "id": 460454700,
@@ -147,7 +152,8 @@
     ],
     "stargazers_count": 3,
     "lastActivityDate": "2023-06-12T13:20:14Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "3.0.1"
   },
   {
     "id": 455083199,
@@ -164,7 +170,8 @@
     ],
     "stargazers_count": 0,
     "lastActivityDate": "2023-05-26T07:18:16Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "2.0.0"
   },
   {
     "id": 419280779,
@@ -181,7 +188,8 @@
     ],
     "stargazers_count": 3,
     "lastActivityDate": "2025-11-20T14:59:01Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "6.1.0"
   },
   {
     "id": 459531232,
@@ -198,7 +206,8 @@
     ],
     "stargazers_count": 1,
     "lastActivityDate": "2023-05-26T07:10:43Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "2.0.0"
   },
   {
     "id": 440475409,
@@ -215,7 +224,8 @@
     ],
     "stargazers_count": 0,
     "lastActivityDate": "2026-07-10T06:42:42Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "4.0.0"
   },
   {
     "id": 426145968,
@@ -233,7 +243,8 @@
     ],
     "stargazers_count": 1,
     "lastActivityDate": "2023-05-26T07:54:55Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "2.0.0"
   },
   {
     "id": 428645251,
@@ -252,7 +263,8 @@
     ],
     "stargazers_count": 0,
     "lastActivityDate": "2026-06-11T11:37:22Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "5.2.0"
   },
   {
     "id": 427001770,
@@ -269,7 +281,8 @@
     ],
     "stargazers_count": 0,
     "lastActivityDate": "2023-05-26T07:45:19Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "2.0.0"
   },
   {
     "id": 638903095,
@@ -285,7 +298,8 @@
     ],
     "stargazers_count": 1,
     "lastActivityDate": "2026-09-29T09:24:08Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "1.25.1"
   },
   {
     "id": 601679171,
@@ -302,7 +316,8 @@
     ],
     "stargazers_count": 2,
     "lastActivityDate": "2023-06-21T11:25:47Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "1.0.0"
   },
   {
     "id": 639897282,
@@ -318,7 +333,8 @@
     ],
     "stargazers_count": 0,
     "lastActivityDate": "2026-08-26T09:54:31Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "1.2.1"
   },
   {
     "id": 954775302,
@@ -337,7 +353,8 @@
     ],
     "stargazers_count": 2,
     "lastActivityDate": "2025-06-18T07:07:04Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "1.0.0"
   },
   {
     "id": 422179974,
@@ -365,7 +382,8 @@
     ],
     "stargazers_count": 0,
     "lastActivityDate": "2025-11-06T17:27:58Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "1.11.0"
   },
   {
     "id": 823654903,
@@ -381,7 +399,8 @@
     ],
     "stargazers_count": 0,
     "lastActivityDate": "2025-12-12T18:17:38Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "1.6.2"
   },
   {
     "id": 644751562,
@@ -416,7 +435,8 @@
     ],
     "stargazers_count": 2,
     "lastActivityDate": "2024-01-12T17:12:05Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "1.0.1"
   },
   {
     "id": 600336566,
@@ -430,7 +450,8 @@
     ],
     "stargazers_count": 0,
     "lastActivityDate": "2023-02-22T10:20:32Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "0.0.03"
   },
   {
     "id": 560818202,
@@ -449,7 +470,8 @@
     ],
     "stargazers_count": 3,
     "lastActivityDate": "2023-10-13T14:14:28Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "1.2.6"
   },
   {
     "id": 1228807806,
@@ -463,7 +485,8 @@
     ],
     "stargazers_count": 1,
     "lastActivityDate": "2026-08-27T12:49:42Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "v1.2.7"
   },
   {
     "id": 531445015,
@@ -481,7 +504,8 @@
     ],
     "stargazers_count": 1,
     "lastActivityDate": "2024-09-09T14:23:18Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "v1.2.1"
   },
   {
     "id": 983380348,
@@ -515,7 +539,8 @@
     ],
     "stargazers_count": 2,
     "lastActivityDate": "2025-08-29T11:08:47Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "1.0.26"
   },
   {
     "id": 586791292,
@@ -535,7 +560,8 @@
     ],
     "stargazers_count": 29,
     "lastActivityDate": "2024-12-19T16:36:25Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "2.1.0"
   },
   {
     "id": 323387989,
@@ -555,7 +581,8 @@
     ],
     "stargazers_count": 1,
     "lastActivityDate": "2023-01-16T10:29:34Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "0.2.0"
   },
   {
     "id": 452267875,
@@ -570,7 +597,8 @@
     ],
     "stargazers_count": 0,
     "lastActivityDate": "2022-01-26T14:20:12Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "1.0.0"
   },
   {
     "id": 928228067,
@@ -590,7 +618,8 @@
     ],
     "stargazers_count": 12,
     "lastActivityDate": "2026-01-27T14:25:06Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "1.2.0"
   },
   {
     "id": 524078409,
@@ -608,7 +637,8 @@
     ],
     "stargazers_count": 0,
     "lastActivityDate": "2023-02-23T10:24:52Z",
-    "type": "release"
+    "type": "release",
+    "releaseVersion": "2.0.10"
   },
   {
     "id": 1197382382,
@@ -640,12 +670,12 @@
     "html_url": "https://github.com/trustedshops-public/trustedshops-public.github.io",
     "description": "GitHub Page",
     "created_at": "2021-11-15T12:23:16Z",
-    "updated_at": "2026-10-06T10:30:35Z",
+    "updated_at": "2026-10-06T10:33:26Z",
     "topics": [
       "github-pages"
     ],
     "stargazers_count": 0,
-    "lastActivityDate": "2026-10-06T10:27:17Z",
+    "lastActivityDate": "2026-10-06T10:33:07Z",
     "type": "commit"
   }
 ]
