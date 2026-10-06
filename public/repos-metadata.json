@@ -43,7 +43,8 @@
     ],
     "stargazers_count": 0,
     "lastActivityDate": "2023-05-24T07:37:35Z",
-    "type": "commit"
+    "type": "commit",
+    "language": "Jinja"
   },
   {
     "id": 644789492,
@@ -59,7 +60,8 @@
     ],
     "stargazers_count": 0,
     "lastActivityDate": "2023-05-24T11:50:18Z",
-    "type": "pushed_at"
+    "type": "pushed_at",
+    "language": "Makefile"
   },
   {
     "id": 429058390,
@@ -135,7 +137,8 @@
     "stargazers_count": 2,
     "lastActivityDate": "2023-05-26T07:22:08Z",
     "type": "release",
-    "releaseVersion": "2.0.0"
+    "releaseVersion": "2.0.0",
+    "language": "Shell"
   },
   {
     "id": 460454700,
@@ -171,7 +174,8 @@
     "stargazers_count": 0,
     "lastActivityDate": "2023-05-26T07:18:16Z",
     "type": "release",
-    "releaseVersion": "2.0.0"
+    "releaseVersion": "2.0.0",
+    "language": "Shell"
   },
   {
     "id": 419280779,
@@ -189,7 +193,8 @@
     "stargazers_count": 3,
     "lastActivityDate": "2025-11-20T14:59:01Z",
     "type": "release",
-    "releaseVersion": "6.1.0"
+    "releaseVersion": "6.1.0",
+    "language": "Shell"
   },
   {
     "id": 459531232,
@@ -225,7 +230,8 @@
     "stargazers_count": 0,
     "lastActivityDate": "2026-07-10T06:42:42Z",
     "type": "release",
-    "releaseVersion": "4.0.0"
+    "releaseVersion": "4.0.0",
+    "language": "Shell"
   },
   {
     "id": 426145968,
@@ -244,7 +250,8 @@
     "stargazers_count": 1,
     "lastActivityDate": "2023-05-26T07:54:55Z",
     "type": "release",
-    "releaseVersion": "2.0.0"
+    "releaseVersion": "2.0.0",
+    "language": "Shell"
   },
   {
     "id": 428645251,
@@ -264,7 +271,8 @@
     "stargazers_count": 0,
     "lastActivityDate": "2026-06-11T11:37:22Z",
     "type": "release",
-    "releaseVersion": "5.2.0"
+    "releaseVersion": "5.2.0",
+    "language": "Shell"
   },
   {
     "id": 427001770,
@@ -282,7 +290,8 @@
     "stargazers_count": 0,
     "lastActivityDate": "2023-05-26T07:45:19Z",
     "type": "release",
-    "releaseVersion": "2.0.0"
+    "releaseVersion": "2.0.0",
+    "language": "Shell"
   },
   {
     "id": 638903095,
@@ -299,7 +308,8 @@
     "stargazers_count": 1,
     "lastActivityDate": "2026-09-29T09:24:08Z",
     "type": "release",
-    "releaseVersion": "1.25.1"
+    "releaseVersion": "1.25.1",
+    "language": "TypeScript"
   },
   {
     "id": 601679171,
@@ -317,7 +327,8 @@
     "stargazers_count": 2,
     "lastActivityDate": "2023-06-21T11:25:47Z",
     "type": "release",
-    "releaseVersion": "1.0.0"
+    "releaseVersion": "1.0.0",
+    "language": "TypeScript"
   },
   {
     "id": 639897282,
@@ -334,7 +345,8 @@
     "stargazers_count": 0,
     "lastActivityDate": "2026-08-26T09:54:31Z",
     "type": "release",
-    "releaseVersion": "1.2.1"
+    "releaseVersion": "1.2.1",
+    "language": "TypeScript"
   },
   {
     "id": 954775302,
@@ -354,7 +366,8 @@
     "stargazers_count": 2,
     "lastActivityDate": "2025-06-18T07:07:04Z",
     "type": "release",
-    "releaseVersion": "1.0.0"
+    "releaseVersion": "1.0.0",
+    "language": "HTML"
   },
   {
     "id": 422179974,
@@ -383,7 +396,8 @@
     "stargazers_count": 0,
     "lastActivityDate": "2025-11-06T17:27:58Z",
     "type": "release",
-    "releaseVersion": "1.11.0"
+    "releaseVersion": "1.11.0",
+    "language": "TypeScript"
   },
   {
     "id": 823654903,
@@ -400,7 +414,8 @@
     "stargazers_count": 0,
     "lastActivityDate": "2025-12-12T18:17:38Z",
     "type": "release",
-    "releaseVersion": "1.6.2"
+    "releaseVersion": "1.6.2",
+    "language": "PHP"
   },
   {
     "id": 644751562,
@@ -417,7 +432,8 @@
     ],
     "stargazers_count": 0,
     "lastActivityDate": "2023-05-24T07:40:28Z",
-    "type": "commit"
+    "type": "commit",
+    "language": "Python"
   },
   {
     "id": 560817987,
@@ -436,7 +452,8 @@
     "stargazers_count": 2,
     "lastActivityDate": "2024-01-12T17:12:05Z",
     "type": "release",
-    "releaseVersion": "1.0.1"
+    "releaseVersion": "1.0.1",
+    "language": "Kotlin"
   },
   {
     "id": 600336566,
@@ -451,7 +468,8 @@
     "stargazers_count": 0,
     "lastActivityDate": "2023-02-22T10:20:32Z",
     "type": "release",
-    "releaseVersion": "0.0.03"
+    "releaseVersion": "0.0.03",
+    "language": "Kotlin"
   },
   {
     "id": 560818202,
@@ -471,7 +489,8 @@
     "stargazers_count": 3,
     "lastActivityDate": "2023-10-13T14:14:28Z",
     "type": "release",
-    "releaseVersion": "1.2.6"
+    "releaseVersion": "1.2.6",
+    "language": "Swift"
   },
   {
     "id": 1228807806,
@@ -486,7 +505,8 @@
     "stargazers_count": 1,
     "lastActivityDate": "2026-08-27T12:49:42Z",
     "type": "release",
-    "releaseVersion": "v1.2.7"
+    "releaseVersion": "v1.2.7",
+    "language": "Swift"
   },
   {
     "id": 531445015,
@@ -505,7 +525,8 @@
     "stargazers_count": 1,
     "lastActivityDate": "2024-09-09T14:23:18Z",
     "type": "release",
-    "releaseVersion": "v1.2.1"
+    "releaseVersion": "v1.2.1",
+    "language": "TypeScript"
   },
   {
     "id": 983380348,
@@ -519,7 +540,8 @@
     ],
     "stargazers_count": 0,
     "lastActivityDate": "2025-05-14T09:46:00Z",
-    "type": "commit"
+    "type": "commit",
+    "language": "TypeScript"
   },
   {
     "id": 647692252,
@@ -540,7 +562,8 @@
     "stargazers_count": 2,
     "lastActivityDate": "2025-08-29T11:08:47Z",
     "type": "release",
-    "releaseVersion": "1.0.26"
+    "releaseVersion": "1.0.26",
+    "language": "Go"
   },
   {
     "id": 586791292,
@@ -561,7 +584,8 @@
     "stargazers_count": 29,
     "lastActivityDate": "2024-12-19T16:36:25Z",
     "type": "release",
-    "releaseVersion": "2.1.0"
+    "releaseVersion": "2.1.0",
+    "language": "Python"
   },
   {
     "id": 323387989,
@@ -582,7 +606,8 @@
     "stargazers_count": 1,
     "lastActivityDate": "2023-01-16T10:29:34Z",
     "type": "release",
-    "releaseVersion": "0.2.0"
+    "releaseVersion": "0.2.0",
+    "language": "Python"
   },
   {
     "id": 452267875,
@@ -598,7 +623,8 @@
     "stargazers_count": 0,
     "lastActivityDate": "2022-01-26T14:20:12Z",
     "type": "release",
-    "releaseVersion": "1.0.0"
+    "releaseVersion": "1.0.0",
+    "language": "Python"
   },
   {
     "id": 928228067,
@@ -619,7 +645,8 @@
     "stargazers_count": 12,
     "lastActivityDate": "2026-01-27T14:25:06Z",
     "type": "release",
-    "releaseVersion": "1.2.0"
+    "releaseVersion": "1.2.0",
+    "language": "Python"
   },
   {
     "id": 524078409,
@@ -638,7 +665,8 @@
     "stargazers_count": 0,
     "lastActivityDate": "2023-02-23T10:24:52Z",
     "type": "release",
-    "releaseVersion": "2.0.10"
+    "releaseVersion": "2.0.10",
+    "language": "Kotlin"
   },
   {
     "id": 1197382382,
@@ -650,7 +678,8 @@
     "topics": [],
     "stargazers_count": 0,
     "lastActivityDate": "2026-03-31T14:37:31Z",
-    "type": "commit"
+    "type": "commit",
+    "language": "TypeScript"
   },
   {
     "id": 1160923443,
@@ -662,7 +691,8 @@
     "topics": [],
     "stargazers_count": 0,
     "lastActivityDate": "2026-02-27T09:57:32Z",
-    "type": "commit"
+    "type": "commit",
+    "language": "Go"
   },
   {
     "id": 428253171,
@@ -670,12 +700,13 @@
     "html_url": "https://github.com/trustedshops-public/trustedshops-public.github.io",
     "description": "GitHub Page",
     "created_at": "2021-11-15T12:23:16Z",
-    "updated_at": "2026-10-06T10:33:26Z",
+    "updated_at": "2026-10-06T14:04:21Z",
     "topics": [
       "github-pages"
     ],
     "stargazers_count": 0,
-    "lastActivityDate": "2026-10-06T10:33:07Z",
-    "type": "commit"
+    "lastActivityDate": "2026-10-06T14:04:05Z",
+    "type": "commit",
+    "language": "TypeScript"
   }
 ]

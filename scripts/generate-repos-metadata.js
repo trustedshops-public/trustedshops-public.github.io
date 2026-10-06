@@ -81,6 +81,7 @@ async function main() {
         lastActivityDate,
         type,
         ...(releaseVersion && { releaseVersion }),
+        ...(repo.language && { language: repo.language }),
       };
       metadata.push(entry);
       console.log(`✓ ${repo.name} (${type}${releaseVersion ? ` - ${releaseVersion}` : ''})`);
@@ -98,6 +99,7 @@ async function main() {
         stargazers_count: repo.stargazers_count,
         lastActivityDate: repo.pushed_at,
         type: 'fallback',
+        ...(repo.language && { language: repo.language }),
       });
     }
   }

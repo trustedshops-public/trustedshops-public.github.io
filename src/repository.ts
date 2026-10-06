@@ -10,6 +10,7 @@ export type Repository = {
   lastActivityDate: string;
   type: 'release' | 'commit' | 'pushed_at' | 'fallback';
   releaseVersion?: string;
+  language?: string;
 };
 
 export type GroupRepository = Map<string, Repository[]>;
