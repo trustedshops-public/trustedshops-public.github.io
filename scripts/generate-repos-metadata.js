@@ -54,11 +54,12 @@ async function getLastActivityDate(repo) {
 
 async function main() {
   console.log('Fetching repos from GitHub...');
-  const repos = await fetchWithRetry(
+  const allRepos = await fetchWithRetry(
     `https://api.github.com/users/${ORG}/repos?per_page=100&type=owner`
   );
 
-  console.log(`Found ${repos.length} repos. Fetching activity dates...`);
+  const repos = allRepos.filter(r => !r.archived);
+  console.log(`Found ${repos.length} active repos (${allRepos.length - repos.length} archived). Fetching activity dates...`);
   const metadata = [];
 
   for (const repo of repos) {
