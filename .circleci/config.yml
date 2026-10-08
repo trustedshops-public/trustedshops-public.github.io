@@ -81,7 +81,9 @@ workflows:
   repos-metadata:
     when: << pipeline.parameters.generate-repos-metadata >>
     jobs:
-      - generate-repos-metadata
+      - generate-repos-metadata:
+          context:
+            - semantic-release
       - build-metadata:
           requires:
             - generate-repos-metadata
