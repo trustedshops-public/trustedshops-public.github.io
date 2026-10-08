@@ -18,9 +18,9 @@ yarn format
 
 ### Repository Metadata
 
-Repositories are sorted by their most meaningful activity date (latest release or main branch commit). The metadata is generated daily by CircleCI and stored in `public/repos-metadata.json`, which is automatically included in the build.
+Repositories are sorted by their most meaningful activity date (latest release or main branch commit). CircleCI generates the metadata daily and saves it as a build artifact. The file `public/repos-metadata.json` is git-ignored, so it is not committed.
 
-For local development, generate metadata manually:
+For local development, generate the file manually:
 
 ```bash
 GITHUB_TOKEN=<your-token> yarn metadata

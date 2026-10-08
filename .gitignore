@@ -14,6 +14,7 @@ build
 dist-ssr
 *.local
 package-lock.json
+public/repos-metadata.json
 
 # Editor directories and files
 .vscode/*
