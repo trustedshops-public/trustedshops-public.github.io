@@ -1,5 +1,10 @@
 version: '2.1'
 
+parameters:
+  generate-repos-metadata:
+    type: boolean
+    default: false
+
 orbs:
   node: circleci/node@7.2.1
   github-utils: trustedshops-public/github-utils@1.3.1
@@ -71,6 +76,10 @@ workflows:
             branches:
               only:
                 - main
+    when:
+      or:
+        - << pipeline.parameters.generate-repos-metadata >>
+        - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
     jobs:
       - generate-repos-metadata:
           context:
