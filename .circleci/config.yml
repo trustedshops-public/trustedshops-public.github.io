@@ -68,18 +68,8 @@ workflows:
             branches:
               only:
                 - main
-  scheduled-metadata:
-    triggers:
-      - schedule:
-          cron: "0 2 * * *"
-          filters:
-            branches:
-              only:
-                - main
-    when:
-      or:
-        - << pipeline.parameters.generate-repos-metadata >>
-        - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
+  repos-metadata:
+    when: << pipeline.parameters.generate-repos-metadata >>
     jobs:
       - generate-repos-metadata:
           context:
