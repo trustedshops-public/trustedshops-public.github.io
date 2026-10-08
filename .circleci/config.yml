@@ -26,6 +26,8 @@ jobs:
     executor: node/default
     steps:
       - checkout
+      # picks up the metadata commit pushed by generate-repos-metadata in the scheduled run
+      - run: git pull --ff-only origin "$CIRCLE_BRANCH"
       - node/install-packages:
           pkg-manager: yarn
       - run:
@@ -73,3 +75,11 @@ workflows:
       - generate-repos-metadata:
           context:
             - semantic-release
+      - build:
+          requires:
+            - generate-repos-metadata
+      - deploy:
+          context:
+            - semantic-release
+          requires:
+            - build
