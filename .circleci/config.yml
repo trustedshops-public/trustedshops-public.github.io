@@ -19,7 +19,7 @@ jobs:
           command: |
             git config user.email "no-reply@trustedshops.com"
             git config user.name "trustedshops-public-cns-bot"
-            git add repos-metadata.json
+            git add public/repos-metadata.json
             git commit -m "chore: update repos metadata" || echo "No changes to commit"
             git push origin main
   build:
