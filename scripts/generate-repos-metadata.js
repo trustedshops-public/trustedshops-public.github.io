@@ -30,7 +30,10 @@ async function getLastActivityDate(repo) {
         lastActivityDate: releases.published_at,
         type: 'release',
         releaseVersion: releases.tag_name,
-        downloads: releases.assets.reduce((sum, a) => sum + a.download_count, 0),
+        downloads: releases.assets.reduce(
+          (sum, a) => sum + a.download_count,
+          0,
+        ),
       };
     }
   } catch (err) {
