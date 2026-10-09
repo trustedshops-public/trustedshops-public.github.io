@@ -16,14 +16,23 @@ jobs:
       - checkout
       - node/install-packages:
           pkg-manager: yarn
+      - restore_cache:
+          keys:
+            - repos-metadata-v1-
       - run:
           name: Generate repos metadata if needed
           command: |
             if [ "<< pipeline.parameters.generate-repos-metadata >>" = "true" ] || [ ! -f public/repos-metadata.json ]; then
               node scripts/generate-repos-metadata.js
             fi
-      - store_artifacts:
-          path: public/repos-metadata.json
+      - run:
+          name: Fail if repos metadata is missing
+          command: |
+            test -f public/repos-metadata.json || { echo "public/repos-metadata.json is missing"; exit 1; }
+      - save_cache:
+          key: repos-metadata-v1-{{ epoch }}
+          paths:
+            - public/repos-metadata.json
       - run:
           name: Build with vite
           command: yarn run build
