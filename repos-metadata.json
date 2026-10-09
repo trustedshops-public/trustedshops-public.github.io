@@ -26,7 +26,8 @@
     "stargazers_count": 0,
     "lastActivityDate": "2026-08-24T12:19:54Z",
     "type": "release",
-    "releaseVersion": "v1.2.6"
+    "releaseVersion": "v1.2.6",
+    "downloads": 0
   },
   {
     "id": 456572539,
@@ -79,7 +80,8 @@
     "stargazers_count": 1,
     "lastActivityDate": "2023-06-29T09:30:26Z",
     "type": "release",
-    "releaseVersion": "3.0.2"
+    "releaseVersion": "3.0.2",
+    "downloads": 0
   },
   {
     "id": 422193101,
@@ -98,7 +100,8 @@
     "stargazers_count": 4,
     "lastActivityDate": "2023-05-26T07:02:47Z",
     "type": "release",
-    "releaseVersion": "3.0.0"
+    "releaseVersion": "3.0.0",
+    "downloads": 0
   },
   {
     "id": 660114361,
@@ -119,7 +122,8 @@
     "stargazers_count": 0,
     "lastActivityDate": "2026-07-28T13:11:18Z",
     "type": "release",
-    "releaseVersion": "1.3.1"
+    "releaseVersion": "1.3.1",
+    "downloads": 0
   },
   {
     "id": 452763957,
@@ -138,6 +142,7 @@
     "lastActivityDate": "2023-05-26T07:22:08Z",
     "type": "release",
     "releaseVersion": "2.0.0",
+    "downloads": 0,
     "language": "Shell"
   },
   {
@@ -156,7 +161,8 @@
     "stargazers_count": 3,
     "lastActivityDate": "2023-06-12T13:20:14Z",
     "type": "release",
-    "releaseVersion": "3.0.1"
+    "releaseVersion": "3.0.1",
+    "downloads": 0
   },
   {
     "id": 455083199,
@@ -175,6 +181,7 @@
     "lastActivityDate": "2023-05-26T07:18:16Z",
     "type": "release",
     "releaseVersion": "2.0.0",
+    "downloads": 0,
     "language": "Shell"
   },
   {
@@ -194,6 +201,7 @@
     "lastActivityDate": "2025-11-20T14:59:01Z",
     "type": "release",
     "releaseVersion": "6.1.0",
+    "downloads": 0,
     "language": "Shell"
   },
   {
@@ -212,7 +220,8 @@
     "stargazers_count": 1,
     "lastActivityDate": "2023-05-26T07:10:43Z",
     "type": "release",
-    "releaseVersion": "2.0.0"
+    "releaseVersion": "2.0.0",
+    "downloads": 0
   },
   {
     "id": 440475409,
@@ -231,6 +240,7 @@
     "lastActivityDate": "2026-07-10T06:42:42Z",
     "type": "release",
     "releaseVersion": "4.0.0",
+    "downloads": 0,
     "language": "Shell"
   },
   {
@@ -251,6 +261,7 @@
     "lastActivityDate": "2023-05-26T07:54:55Z",
     "type": "release",
     "releaseVersion": "2.0.0",
+    "downloads": 0,
     "language": "Shell"
   },
   {
@@ -272,6 +283,7 @@
     "lastActivityDate": "2026-06-11T11:37:22Z",
     "type": "release",
     "releaseVersion": "5.2.0",
+    "downloads": 0,
     "language": "Shell"
   },
   {
@@ -291,6 +303,7 @@
     "lastActivityDate": "2023-05-26T07:45:19Z",
     "type": "release",
     "releaseVersion": "2.0.0",
+    "downloads": 0,
     "language": "Shell"
   },
   {
@@ -309,6 +322,7 @@
     "lastActivityDate": "2026-09-29T09:24:08Z",
     "type": "release",
     "releaseVersion": "1.25.1",
+    "downloads": 0,
     "language": "TypeScript"
   },
   {
@@ -328,6 +342,7 @@
     "lastActivityDate": "2023-06-21T11:25:47Z",
     "type": "release",
     "releaseVersion": "1.0.0",
+    "downloads": 0,
     "language": "TypeScript"
   },
   {
@@ -346,6 +361,7 @@
     "lastActivityDate": "2026-08-26T09:54:31Z",
     "type": "release",
     "releaseVersion": "1.2.1",
+    "downloads": 0,
     "language": "TypeScript"
   },
   {
@@ -367,6 +383,7 @@
     "lastActivityDate": "2025-06-18T07:07:04Z",
     "type": "release",
     "releaseVersion": "1.0.0",
+    "downloads": 0,
     "language": "HTML"
   },
   {
@@ -397,6 +414,7 @@
     "lastActivityDate": "2025-11-06T17:27:58Z",
     "type": "release",
     "releaseVersion": "1.11.0",
+    "downloads": 0,
     "language": "TypeScript"
   },
   {
@@ -415,6 +433,7 @@
     "lastActivityDate": "2025-12-12T18:17:38Z",
     "type": "release",
     "releaseVersion": "1.6.2",
+    "downloads": 0,
     "language": "PHP"
   },
   {
@@ -453,6 +472,7 @@
     "lastActivityDate": "2024-01-12T17:12:05Z",
     "type": "release",
     "releaseVersion": "1.0.1",
+    "downloads": 0,
     "language": "Kotlin"
   },
   {
@@ -469,6 +489,7 @@
     "lastActivityDate": "2023-02-22T10:20:32Z",
     "type": "release",
     "releaseVersion": "0.0.03",
+    "downloads": 0,
     "language": "Kotlin"
   },
   {
@@ -490,6 +511,7 @@
     "lastActivityDate": "2023-10-13T14:14:28Z",
     "type": "release",
     "releaseVersion": "1.2.6",
+    "downloads": 0,
     "language": "Swift"
   },
   {
@@ -506,6 +528,7 @@
     "lastActivityDate": "2026-08-27T12:49:42Z",
     "type": "release",
     "releaseVersion": "v1.2.7",
+    "downloads": 60,
     "language": "Swift"
   },
   {
@@ -526,6 +549,7 @@
     "lastActivityDate": "2024-09-09T14:23:18Z",
     "type": "release",
     "releaseVersion": "v1.2.1",
+    "downloads": 0,
     "language": "TypeScript"
   },
   {
@@ -563,6 +587,7 @@
     "lastActivityDate": "2025-08-29T11:08:47Z",
     "type": "release",
     "releaseVersion": "1.0.26",
+    "downloads": 20,
     "language": "Go"
   },
   {
@@ -585,6 +610,7 @@
     "lastActivityDate": "2024-12-19T16:36:25Z",
     "type": "release",
     "releaseVersion": "2.1.0",
+    "downloads": 0,
     "language": "Python"
   },
   {
@@ -607,6 +633,7 @@
     "lastActivityDate": "2023-01-16T10:29:34Z",
     "type": "release",
     "releaseVersion": "0.2.0",
+    "downloads": 0,
     "language": "Python"
   },
   {
@@ -624,6 +651,7 @@
     "lastActivityDate": "2022-01-26T14:20:12Z",
     "type": "release",
     "releaseVersion": "1.0.0",
+    "downloads": 0,
     "language": "Python"
   },
   {
@@ -646,6 +674,7 @@
     "lastActivityDate": "2026-01-27T14:25:06Z",
     "type": "release",
     "releaseVersion": "1.2.0",
+    "downloads": 0,
     "language": "Python"
   },
   {
@@ -666,6 +695,7 @@
     "lastActivityDate": "2023-02-23T10:24:52Z",
     "type": "release",
     "releaseVersion": "2.0.10",
+    "downloads": 0,
     "language": "Kotlin"
   },
   {
@@ -700,12 +730,12 @@
     "html_url": "https://github.com/trustedshops-public/trustedshops-public.github.io",
     "description": "GitHub Page",
     "created_at": "2021-11-15T12:23:16Z",
-    "updated_at": "2026-10-09T07:41:13Z",
+    "updated_at": "2026-10-09T08:28:19Z",
     "topics": [
       "github-pages"
     ],
     "stargazers_count": 0,
-    "lastActivityDate": "2026-10-09T07:41:01Z",
+    "lastActivityDate": "2026-10-09T08:27:40Z",
     "type": "commit",
     "language": "TypeScript"
   }
