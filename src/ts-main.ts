@@ -7,7 +7,7 @@ import {
   Repository,
   getOrderedRepositories,
 } from './repository';
-import './ts-section.ts';
+import './ts-section';
 
 @customElement('ts-main')
 export class TsMain extends LitElement {

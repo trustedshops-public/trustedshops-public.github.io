@@ -8,6 +8,8 @@ import { capitaliseFirstLetterOfWord } from './util';
 export class TsCard extends LitElement {
   @property()
   repository: string = '';
+  @property({ type: Boolean, attribute: 'top-downloads' })
+  topDownloads: boolean = false;
   @state()
   repo: Repository = {
     id: -1,
@@ -71,6 +73,30 @@ export class TsCard extends LitElement {
         font: var(--ts-copy);
         color: var(--font-color);
         flex: 1;
+      }
+      .top-downloads {
+        font-weight: 700;
+        background: linear-gradient(
+          90deg,
+          var(--ts-blue-300),
+          var(--ts-pineapple-500),
+          var(--ts-blue-300)
+        );
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: downloads-shimmer 3s linear infinite;
+      }
+      @keyframes downloads-shimmer {
+        to {
+          background-position: 200% center;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .top-downloads {
+          animation: none;
+        }
       }
       .card-footer {
         display: flex;
@@ -180,7 +206,7 @@ export class TsCard extends LitElement {
           }
           ${
             this.repo.downloads
-              ? html`<span>
+              ? html`<span class="${this.topDownloads ? 'top-downloads' : ''}">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"

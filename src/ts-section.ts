@@ -2,7 +2,7 @@ import { css, html, LitElement } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { Repository } from './repository';
 
-import './ts-card.ts';
+import './ts-card';
 import { rootStyles } from './rootStyles';
 import { capitaliseFirstLetterOfWord } from './util';
 
@@ -46,12 +46,17 @@ export class TsSection extends LitElement {
   ];
 
   render() {
+    const maxDownloads = Math.max(
+      0,
+      ...this.repositories.map((r) => r.downloads ?? 0),
+    );
     return html` <section>
       <h2>${this.title}</h2>
       <ul>
         ${this.repositories.map((repository) => {
           return html` <ts-card
             repository="${JSON.stringify(repository)}"
+            ?top-downloads=${maxDownloads > 0 && repository.downloads === maxDownloads}
           ></ts-card>`;
         })}
       </ul>
