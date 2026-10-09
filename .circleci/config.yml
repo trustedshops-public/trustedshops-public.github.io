@@ -9,11 +9,21 @@ orbs:
   node: circleci/node@7.2.1
   github-utils: trustedshops-public/github-utils@1.3.1
 
-commands:
-  build-site:
+jobs:
+  build:
+    executor: node/default
     steps:
+      - checkout
       - node/install-packages:
           pkg-manager: yarn
+      - run:
+          name: Generate repos metadata if needed
+          command: |
+            if [ "<< pipeline.parameters.generate-repos-metadata >>" = "true" ] || [ ! -f public/repos-metadata.json ]; then
+              node scripts/generate-repos-metadata.js
+            fi
+      - store_artifacts:
+          path: public/repos-metadata.json
       - run:
           name: Build with vite
           command: yarn run build
@@ -21,36 +31,6 @@ commands:
           root: .
           paths:
             - build/
-
-jobs:
-  generate-repos-metadata:
-    executor: node/default
-    steps:
-      - checkout
-      - node/install-packages:
-          pkg-manager: yarn
-      - run:
-          name: Generate repos metadata
-          command: node scripts/generate-repos-metadata.js
-      - store_artifacts:
-          path: public/repos-metadata.json
-      - persist_to_workspace:
-          root: .
-          paths:
-            - public/repos-metadata.json
-  build:
-    executor: node/default
-    steps:
-      - checkout
-      - build-site
-  build-metadata:
-    executor: node/default
-    steps:
-      - checkout
-      # puts public/repos-metadata.json from generate-repos-metadata into public/
-      - attach_workspace:
-          at: .
-      - build-site
   deploy:
     executor: node/default
     steps:
@@ -66,9 +46,10 @@ jobs:
 
 workflows:
   main:
-    unless: << pipeline.parameters.generate-repos-metadata >>
     jobs:
-      - build
+      - build:
+          context:
+            - semantic-release
       - deploy:
           context:
             - semantic-release
@@ -78,17 +59,3 @@ workflows:
             branches:
               only:
                 - main
-  repos-metadata:
-    when: << pipeline.parameters.generate-repos-metadata >>
-    jobs:
-      - generate-repos-metadata:
-          context:
-            - semantic-release
-      - build-metadata:
-          requires:
-            - generate-repos-metadata
-      - deploy:
-          context:
-            - semantic-release
-          requires:
-            - build-metadata
