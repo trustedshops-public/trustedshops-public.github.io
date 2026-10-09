@@ -18,8 +18,10 @@ export type GroupRepository = Map<string, Repository[]>;
 export const getOrderedRepositories = (list: Repository[]): GroupRepository => {
   const data: GroupRepository = new Map();
 
-  const sorted = list.sort((a, b) =>
-    new Date(b.lastActivityDate).getTime() - new Date(a.lastActivityDate).getTime()
+  const sorted = list.sort(
+    (a, b) =>
+      new Date(b.lastActivityDate).getTime() -
+      new Date(a.lastActivityDate).getTime(),
   );
 
   sorted.forEach((item) => {

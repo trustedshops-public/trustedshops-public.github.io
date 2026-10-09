@@ -13,7 +13,7 @@ async function fetchWithRetry(url, retries = 3) {
       return await res.json();
     } catch (err) {
       if (i === retries - 1) throw err;
-      await new Promise(r => setTimeout(r, 1000 * (i + 1)));
+      await new Promise((r) => setTimeout(r, 1000 * (i + 1)));
     }
   }
 }
@@ -22,7 +22,7 @@ async function getLastActivityDate(repo) {
   try {
     // Try to get latest release
     const releases = await fetchWithRetry(
-      `https://api.github.com/repos/${ORG}/${repo.name}/releases/latest`
+      `https://api.github.com/repos/${ORG}/${repo.name}/releases/latest`,
     );
 
     if (releases.published_at) {
@@ -39,7 +39,7 @@ async function getLastActivityDate(repo) {
   try {
     // Fall back to main branch last commit
     const commits = await fetchWithRetry(
-      `https://api.github.com/repos/${ORG}/${repo.name}/commits?sha=main&per_page=1`
+      `https://api.github.com/repos/${ORG}/${repo.name}/commits?sha=main&per_page=1`,
     );
 
     if (Array.isArray(commits) && commits[0]) {
@@ -59,16 +59,19 @@ async function getLastActivityDate(repo) {
 async function main() {
   console.log('Fetching repos from GitHub...');
   const allRepos = await fetchWithRetry(
-    `https://api.github.com/users/${ORG}/repos?per_page=100&type=owner`
+    `https://api.github.com/users/${ORG}/repos?per_page=100&type=owner`,
   );
 
-  const repos = allRepos.filter(r => !r.archived);
-  console.log(`Found ${repos.length} active repos (${allRepos.length - repos.length} archived). Fetching activity dates...`);
+  const repos = allRepos.filter((r) => !r.archived);
+  console.log(
+    `Found ${repos.length} active repos (${allRepos.length - repos.length} archived). Fetching activity dates...`,
+  );
   const metadata = [];
 
   for (const repo of repos) {
     try {
-      const { lastActivityDate, type, releaseVersion } = await getLastActivityDate(repo);
+      const { lastActivityDate, type, releaseVersion } =
+        await getLastActivityDate(repo);
       const entry = {
         id: repo.id,
         name: repo.name,
@@ -84,7 +87,9 @@ async function main() {
         ...(repo.language && { language: repo.language }),
       };
       metadata.push(entry);
-      console.log(`✓ ${repo.name} (${type}${releaseVersion ? ` - ${releaseVersion}` : ''})`);
+      console.log(
+        `✓ ${repo.name} (${type}${releaseVersion ? ` - ${releaseVersion}` : ''})`,
+      );
     } catch (err) {
       console.error(`✗ ${repo.name}: ${err.message}`);
       // Add fallback with available data
@@ -107,13 +112,13 @@ async function main() {
   console.log(`Writing metadata to public/repos-metadata.json...`);
   fs.writeFileSync(
     'public/repos-metadata.json',
-    JSON.stringify(metadata, null, 2)
+    JSON.stringify(metadata, null, 2),
   );
 
   console.log('Done!');
 }
 
-main().catch(err => {
+main().catch((err) => {
   console.error('Fatal error:', err);
   process.exit(1);
 });
