@@ -30,6 +30,7 @@ async function getLastActivityDate(repo) {
         lastActivityDate: releases.published_at,
         type: 'release',
         releaseVersion: releases.tag_name,
+        downloads: releases.assets.reduce((sum, a) => sum + a.download_count, 0),
       };
     }
   } catch (err) {
@@ -70,7 +71,7 @@ async function main() {
 
   for (const repo of repos) {
     try {
-      const { lastActivityDate, type, releaseVersion } =
+      const { lastActivityDate, type, releaseVersion, downloads } =
         await getLastActivityDate(repo);
       const entry = {
         id: repo.id,
@@ -84,6 +85,7 @@ async function main() {
         lastActivityDate,
         type,
         ...(releaseVersion && { releaseVersion }),
+        ...(downloads !== undefined && { downloads }),
         ...(repo.language && { language: repo.language }),
       };
       metadata.push(entry);
