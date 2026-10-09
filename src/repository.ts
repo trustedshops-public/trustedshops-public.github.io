@@ -10,6 +10,7 @@ export type Repository = {
   lastActivityDate: string;
   type: 'release' | 'commit' | 'pushed_at' | 'fallback';
   releaseVersion?: string;
+  downloads?: number;
   language?: string;
 };
 
