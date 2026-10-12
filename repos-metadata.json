@@ -660,7 +660,7 @@
     "html_url": "https://github.com/trustedshops-public/schema2pyarrow",
     "description": "Converts AsyncApi and JsonSchema to PyArrow schema",
     "created_at": "2025-02-06T09:31:20Z",
-    "updated_at": "2026-10-05T04:35:37Z",
+    "updated_at": "2026-10-12T01:53:49Z",
     "topics": [
       "asyncapi",
       "data-engineering",
