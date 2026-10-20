@@ -637,24 +637,6 @@
     "language": "Python"
   },
   {
-    "id": 452267875,
-    "name": "robotframework-circlecilibrary-test-project",
-    "html_url": "https://github.com/trustedshops-public/robotframework-circlecilibrary-test-project",
-    "description": "This is a test project for the robotframework-circlecilibrary extension",
-    "created_at": "2022-01-26T12:32:08Z",
-    "updated_at": "2022-05-25T11:39:45Z",
-    "topics": [
-      "demo",
-      "python"
-    ],
-    "stargazers_count": 0,
-    "lastActivityDate": "2022-01-26T14:20:12Z",
-    "type": "release",
-    "releaseVersion": "1.0.0",
-    "downloads": 0,
-    "language": "Python"
-  },
-  {
     "id": 928228067,
     "name": "schema2pyarrow",
     "html_url": "https://github.com/trustedshops-public/schema2pyarrow",
