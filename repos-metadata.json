@@ -370,7 +370,7 @@
     "html_url": "https://github.com/trustedshops-public/connect-magento2-app-hyva",
     "description": "Hyva add-on for new generation integration plugin for Magento 2",
     "created_at": "2025-03-25T15:43:18Z",
-    "updated_at": "2026-10-06T08:38:25Z",
+    "updated_at": "2026-11-03T09:15:10Z",
     "topics": [
       "hyva",
       "magento2",
@@ -380,9 +380,9 @@
       "tsconnect"
     ],
     "stargazers_count": 2,
-    "lastActivityDate": "2025-06-18T07:07:04Z",
+    "lastActivityDate": "2026-11-03T09:26:48Z",
     "type": "release",
-    "releaseVersion": "1.0.0",
+    "releaseVersion": "1.1.0",
     "downloads": 0,
     "language": "HTML"
   },
