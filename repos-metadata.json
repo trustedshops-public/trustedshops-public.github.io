@@ -319,9 +319,9 @@
       "tsconnect"
     ],
     "stargazers_count": 1,
-    "lastActivityDate": "2026-09-29T09:24:08Z",
+    "lastActivityDate": "2026-11-23T09:18:57Z",
     "type": "release",
-    "releaseVersion": "1.25.1",
+    "releaseVersion": "1.26.0",
     "downloads": 1,
     "language": "TypeScript"
   },
